@@ -1,43 +1,37 @@
 import React, { Component } from "react";
-
 import "./assets/css/Style.css";
-import RevealText from "./components/RevealText";
+import Loader from "./components/Loader";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { CommentsSection } from "./pages/blog.jsx";
+import { HomePage } from "./pages/home.jsx";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="bg-img">
-          <br />
-          <label>
-            <input type="checkbox" />
-            <span class="menu">
-              <span class="hamburger" />
-            </span>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Work</a>
-              </li>
-            </ul>
-          </label>
-          <RevealText />
+  constructor() {
+    super();
+    this.state = { hasLoaded: false };
+  }
 
-          <div className="footer">
-            <p className="footer-text">Made with</p>
-            <div class="lds-heart">
-              <div />
-            </div>
-            <p className="footer-text">by @Asela Wijesinghe</p>
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ hasLoaded: true });
+    }, 1000);
+  }
+
+  render() {
+    const { hasLoaded } = this.state;
+    if (!hasLoaded) {
+      return <Loader />;
+    } else {
+      return (
+        <Router className="App">
+          <div>
+            <Route exact path="/home" component={HomePage} />
+            <Route exact path="/" component={CommentsSection} />
+            <Route exact path="/blog" component={CommentsSection} />
           </div>
-        </div>
-      </div>
-    );
+        </Router>
+      );
+    }
   }
 }
 

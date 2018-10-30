@@ -15,7 +15,7 @@ export default class RevealText extends React.Component {
 
   render() {
     const textStyles = {
-      color: "white",
+      color: "rgba(255, 255, 255, 0.7)",
       fontSize: "24px",
       lineHeight: "36px",
       fontFamily: "sans-serif",
@@ -29,7 +29,7 @@ export default class RevealText extends React.Component {
           <div />
           <div />
         </div>
-        <ReactRevealText show={this.state.show} text="WELCOME TO THE FUTURE" />
+        <ReactRevealText show={this.state.show} text="WELCOME TO MY PAGE" />
       </div>
     );
   }
