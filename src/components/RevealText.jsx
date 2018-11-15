@@ -29,7 +29,7 @@ export default class RevealText extends React.Component {
           <div />
           <div />
         </div>
-        <ReactRevealText show={this.state.show} text="WELCOME TO MY PAGE" />
+        <ReactRevealText show={this.state.show} text="WELCOME TO MY PROFILE" />
       </div>
     );
   }

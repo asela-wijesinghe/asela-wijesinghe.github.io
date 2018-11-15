@@ -25,8 +25,8 @@ class App extends Component {
       return (
         <Router className="App">
           <div>
-            <Route exact path="/home" component={HomePage} />
-            <Route exact path="/" component={CommentsSection} />
+            <Route exact path="/" component={HomePage} />
+
             <Route exact path="/blog" component={CommentsSection} />
           </div>
         </Router>
