@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aselawijesinghe.github.io/my-portfolio",
+  "homepage": "https://aselawijesinghe.github.io",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "loaders.css": "^0.1.2",
