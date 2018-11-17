@@ -49,6 +49,12 @@ export class HomePage extends React.Component {
               <li>
                 <a href="#">Work</a>
               </li>
+              <li>
+                <a href="#">Research</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
             </ul>
           </label>
           <RevealText />
