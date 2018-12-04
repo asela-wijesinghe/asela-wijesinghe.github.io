@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactRevealText from "react-reveal-text";
+import MediaQuery from "react-responsive";
 
 export default class RevealText extends React.Component {
   constructor() {
@@ -29,7 +30,12 @@ export default class RevealText extends React.Component {
           <div />
           <div />
         </div>
-        <ReactRevealText show={this.state.show} text="WELCOME TO MY PROFILE" />
+        <MediaQuery query="(min-width: 768px)">
+          <ReactRevealText
+            show={this.state.show}
+            text="WELCOME TO MY PROFILE"
+          />
+        </MediaQuery>
       </div>
     );
   }

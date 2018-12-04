@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import "./assets/css/Style.css";
+
 import Loader from "./components/Loader";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { CommentsSection } from "./pages/blog.jsx";
 import { HomePage } from "./pages/home.jsx";
+
+import "./assets/css/Style.css";
+import "./assets/css/animations.css";
+import "./assets/css/navigation.css";
 
 class App extends Component {
   constructor() {

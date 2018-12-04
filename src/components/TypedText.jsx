@@ -9,7 +9,7 @@ export default class TypedText extends React.Component {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
       strings: strings,
-      typeSpeed: 80,
+      typeSpeed: 100,
       backSpeed: 50
     };
     // this.el refers to the <span> in the render() method

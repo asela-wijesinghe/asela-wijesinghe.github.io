@@ -10,9 +10,10 @@ export default class ArModal extends React.Component {
         <img src={marker} className="marker_image" />
         <div className="ar-info">
           <p className="black-small">
-            After scanning the link you have to open the scanned URL from you
-            mobile and please make sure you allow mobile camera access.After
-            camera has been loaded point the mobile here and keep waiting..
+            After scanning the qr code you have to open the scanned URL from you
+            mobile and please make sure you allow mobile camera access for the
+            browser.After camera has been loaded point the mobile to here and
+            keep waiting..
           </p>
           <Button label="Go Back" onClick={toggleClose} />
         </div>
