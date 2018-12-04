@@ -23,10 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build",
-    "clean": "rm -rf build/*",
-    "release": "npm run clean && npm run build",
-    "deploy-prod": "cd build && git add --all && git commit -m \"Release at $(date)\" && git push -f origin master"
+    "deploy": "npm run build && gh-pages -d build && git checkout master && git merge gh-pages && git push origin master",
+    "clean": "rm -rf build/*"
   },
   "eslintConfig": {
     "extends": "react-app"
