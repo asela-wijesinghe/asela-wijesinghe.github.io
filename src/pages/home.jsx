@@ -112,7 +112,7 @@ export class HomePage extends React.Component {
                 />
               </div>
             </div>
-            <MediaQuery query="(min-width: 1024px)">
+            <MediaQuery query="(min-width: 769px)">
               <div className="right-div">
                 <img src={qr} className="qr-image" />
                 <p className="white-small padding">
