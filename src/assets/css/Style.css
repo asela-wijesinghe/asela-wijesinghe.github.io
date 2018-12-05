@@ -12,7 +12,7 @@
   height: 100%;
   background: url("https://imgur.com/ltiAppv.jpg") center center no-repeat;
   background-size: cover;
-  z-index: 1;
+  z-index: 0;
 }
 .bg-img:after {
   content: "";
@@ -29,6 +29,11 @@
   animation: colorChange 20s linear 0s infinite; */
 }
 
+.qr-image {
+  width: 120px;
+  height: 160px;
+}
+
 /* footer */
 .footer {
   position: fixed;
@@ -43,9 +48,25 @@
   padding-right: 20px;
   /* background-color: #111; */
 }
-.qr-image {
-  width: 120px;
-  height: 160px;
+
+@media (max-width: 769px) {
+  .footer {
+    position: absolute;
+    max-height: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    bottom: 0;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    /* padding-right: 20px; */
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0)
+    );
+  }
 }
 
 .footer-text {
@@ -53,8 +74,6 @@
 }
 
 /* //typed css */
-/* Adding CSS manually is only necessary in JSFiddle,
-   where CSS can't be inserted into the <head> */
 .typed-cursor {
   opacity: 1;
   animation: typedjsBlink 0.7s infinite;
@@ -114,11 +133,10 @@
 
 @media (max-width: 767px) {
   .left-div {
-    padding: 0;
     width: 100%;
     padding: 10px;
     flex-direction: column;
-
+    padding-top: 0;
     min-height: 75vh;
     justify-content: space-between;
     text-align: center;
@@ -166,7 +184,7 @@
 .white-small {
   color: rgba(255, 255, 255, 0.8);
   margin: 0px;
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 20px;
   /* text-transform: uppercase; */
 }
