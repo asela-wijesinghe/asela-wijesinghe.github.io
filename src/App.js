@@ -8,6 +8,7 @@ import { HomePage } from "./pages/home.jsx";
 import "./assets/css/Style.css";
 import "./assets/css/animations.css";
 import "./assets/css/navigation.css";
+import "./assets/css/models.css";
 
 class App extends Component {
   constructor() {

@@ -5,8 +5,10 @@ import Button from "../components/Button";
 import qr from "../assets/images/qr.png";
 import Drawer from "react-drag-drawer";
 import ArModal from "../components/ArModal.jsx";
+import InterestedModel from "../components/InterestedModel.jsx";
 import MediaQuery from "react-responsive";
 import { SocialIcon } from "react-social-icons";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const socialButtonStyles = {
   backgroundColor: "#fff",
@@ -19,32 +21,44 @@ const socialButtonStyles = {
   margin: 4,
   alignSelf: "center"
 };
+
 export class HomePage extends React.Component {
   constructor() {
     super();
     this.state = {
-      showModal: false
+      showArModel: false,
+      showInterestedModel: true
     };
-
-    this.toggleModal = this.toggleModal.bind(this);
+    this.toggleArModal = this.toggleArModal.bind(this);
+    this.toggleInterestedModal = this.toggleInterestedModal.bind(this);
   }
 
-  toggleModal() {
-    this.setState({ showModal: !this.state.showModal });
+  toggleArModal() {
+    this.setState({ showArModel: !this.state.showArModel });
+  }
+
+  toggleInterestedModal() {
+    this.setState({ showInterestedModel: !this.state.showInterestedModel });
   }
 
   render() {
-    const { showModal } = this.state;
+    const { showArModel, showInterestedModel } = this.state;
     return (
       <div className="App ">
         <Drawer
-          open={showModal}
-          onRequestClose={this.toggleModal}
+          open={showArModel}
+          onRequestClose={this.toggleArModal}
           modalElementClass={"modal"}
         >
-          <ArModal toggleClose={this.toggleModal} />
+          <ArModal toggleClose={this.toggleArModal} />
         </Drawer>
-
+        <Drawer
+          open={showInterestedModel}
+          onRequestClose={this.toggleInterestedModal}
+          modalElementClass={"lg-modal"}
+        >
+          <InterestedModel toggleClose={this.toggleInterestedModal} />
+        </Drawer>
         <div className="bg-img animated fadeIn">
           <br />
           <label>
@@ -92,7 +106,10 @@ export class HomePage extends React.Component {
                   as a developer or you can outsource the project to my
                   company...
                 </p>
-                <Button label="I'm interested" />
+                <Button
+                  label="I'm interested"
+                  onClick={() => this.setState({ showInterestedModel: true })}
+                />
               </div>
             </div>
             <MediaQuery query="(min-width: 1024px)">
@@ -103,7 +120,7 @@ export class HomePage extends React.Component {
                   <u className="modal_open">
                     <span
                       className="modal_open"
-                      onClick={() => this.setState({ showModal: true })}
+                      onClick={() => this.setState({ showArModel: true })}
                     >
                       click here
                     </span>
