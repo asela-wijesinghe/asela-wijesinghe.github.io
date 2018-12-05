@@ -6,7 +6,19 @@ import qr from "../assets/images/qr.png";
 import Drawer from "react-drag-drawer";
 import ArModal from "../components/ArModal.jsx";
 import MediaQuery from "react-responsive";
+import { SocialIcon } from "react-social-icons";
 
+const socialButtonStyles = {
+  backgroundColor: "#fff",
+  borderRadius: 25,
+  borderStyle: "solid",
+  borderColor: "white",
+  borderWidth: 2,
+  height: 40,
+  width: 40,
+  margin: 4,
+  alignSelf: "center"
+};
 export class HomePage extends React.Component {
   constructor() {
     super();
@@ -87,7 +99,7 @@ export class HomePage extends React.Component {
               <div className="right-div">
                 <img src={qr} className="qr-image" />
                 <p className="white-small padding">
-                  Scan the code and &nbsp;
+                  Wanna see some magic? Scan the code & <br />
                   <u className="modal_open">
                     <span
                       className="modal_open"
@@ -96,18 +108,85 @@ export class HomePage extends React.Component {
                       click here
                     </span>
                   </u>
-                  &nbsp; to see some magic ;)
+                  &nbsp;
                 </p>
-                {/* <Button /> */}
+                <div>
+                  <br />
+                  <p className="connect-text">Connect with me &nbsp;&nbsp;</p>
+                  <SocialIcon
+                    style={socialButtonStyles}
+                    url="https://www.facebook.com/asela.wijesinghe"
+                  />
+                  <SocialIcon
+                    style={socialButtonStyles}
+                    url="https://www.linkedin.com/in/aselawijesinghe-15ntaps/"
+                  />
+                  <SocialIcon
+                    style={socialButtonStyles}
+                    url="  https://www.meetup.com/members/220513781/"
+                    network="meetup"
+                  />
+
+                  <SocialIcon
+                    style={socialButtonStyles}
+                    color="#333"
+                    url="https://github.com/asela-wijesinghe"
+                  />
+                  <SocialIcon
+                    style={socialButtonStyles}
+                    url="https://stackoverflow.com/users/5472761/aze?tab=profile"
+                    color="#FF9653"
+                  />
+                  <SocialIcon
+                    style={socialButtonStyles}
+                    url="https://www.instagram.com/azelawijesinghe/"
+                    color="#FF4571"
+                  />
+                </div>
               </div>
             </MediaQuery>
           </div>
-          <div className="footer">
+          <div className="footer-left">
+            <p className="footer-text">
+              Copyright &copy; 2018. All rights reserved | &nbsp;
+            </p>
+          </div>
+          {/* <SocialIcon
+              style={socialButtonStyles}
+              url="https://www.facebook.com/asela.wijesinghe"
+            />
+            <SocialIcon
+              style={socialButtonStyles}
+              url="https://www.linkedin.com/in/aselawijesinghe-15ntaps/"
+            />
+            <SocialIcon
+              style={socialButtonStyles}
+              url="  https://www.meetup.com/members/220513781/"
+              network="meetup"
+            />
+
+            <SocialIcon
+              style={socialButtonStyles}
+              color="#ccc"
+              url="https://github.com/asela-wijesinghe"
+            />
+            <SocialIcon
+              style={socialButtonStyles}
+              url="https://stackoverflow.com/users/5472761/aze?tab=profile"
+              color="#FF9653"
+            />
+            <SocialIcon
+              style={socialButtonStyles}
+              url="https://www.instagram.com/azelawijesinghe/"
+              color="#FF4571"
+            /> */}
+
+          <div className="footer-right">
             <p className="footer-text">Made with</p>
             <div class="lds-heart">
               <div />
             </div>
-            <p className="footer-text">by @Asela Wijesinghe</p>
+            <p className="footer-text">by Asela Wijesinghe</p>
           </div>
         </div>
       </div>

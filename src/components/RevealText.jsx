@@ -31,10 +31,7 @@ export default class RevealText extends React.Component {
           <div />
         </div>
         <MediaQuery query="(min-width: 768px)">
-          <ReactRevealText
-            show={this.state.show}
-            text="WELCOME TO MY PROFILE"
-          />
+          <ReactRevealText show={this.state.show} text="ASELA WIJESINGHE" />
         </MediaQuery>
       </div>
     );

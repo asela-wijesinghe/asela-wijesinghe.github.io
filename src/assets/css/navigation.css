@@ -4,7 +4,7 @@ label .menu {
   position: absolute;
   right: -100px;
   top: -100px;
-  z-index: 0;
+  z-index: 100;
   width: 200px;
   height: 200px;
   background: #fff;
@@ -69,7 +69,7 @@ label input:checked + .menu + ul {
 }
 
 label ul {
-  z-index: 1;
+  z-index: 150;
   position: absolute;
   top: 50%;
   left: 50%;
