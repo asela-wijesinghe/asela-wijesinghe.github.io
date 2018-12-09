@@ -82,6 +82,7 @@ export class HomePage extends React.Component {
                   strings={[
                     "Believer",
                     "Technopreneur",
+                    "UX Lover",
                     "Full Stack Engineer",
                     "Product Developer"
                     // "HTML characters &times; &copy;"
