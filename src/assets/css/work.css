@@ -1,0 +1,22 @@
+.work-card {
+  width: auto;
+  height: 50vh;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  transition: 0.3s;
+}
+
+work-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.center-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.center {
+  /* margin: 5px; */
+}

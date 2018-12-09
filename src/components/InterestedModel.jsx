@@ -17,18 +17,6 @@ import MediaQuery from "react-responsive";
 export default class ArModal extends React.Component {
   render() {
     const { toggleClose } = this.props;
-    const settings = {
-      dots: true,
-      arrows: true,
-      infinite: true,
-      speed: 500,
-      className: "center",
-
-      // infinite: true,
-      // centerPadding: "60px",
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
 
     return (
       <div className="big_model_container">
@@ -91,60 +79,7 @@ export default class ArModal extends React.Component {
             </div>
           </div>
         </div>
-        {/* </MediaQuery>
-        <MediaQuery query="(max-width: 768px)"> */}
-        {/* <Slider {...settings}> */}
-        {/* <div className="card">
-          <h3>Web Developing</h3>
-          <p className="pricing-small">
-            $ <span className="pricing">20</span> /hour
-          </p>
-          <p className="black-small">
-            From simple web designing to complex single page client side
-            applications for business purposes using latest technologies
-            available
-          </p>
-          <div>
-            {" "}
-            <img src={react} className="logo-square-image" />{" "}
-            <img src={sass} className="logo-square-image" />{" "}
-            <img src={redux} className="logo-square-image" />{" "}
-            <img src={node} className="logo-square-image" />{" "}
-          </div>
-        </div>
-        <div className="card">
-          <h3>App Developing</h3>
-          <p className="pricing-small">
-            $ <span className="pricing">25</span> /hour
-          </p>
-          <p className="black-small">
-            Both Android/IOS applications with proper UX solutions generated
-            from javascript enviorenment and converted to proper native apps
-            deployed on app stores
-          </p>
-          <img src={rn} className="logo-square-image-extended" />
-          <img src={firebase} className="logo-square-image" />{" "}
-        </div>
-        <div className="card">
-          <h3>Software Developing</h3>
-          <p className="pricing-small">
-            $ <span className="pricing">40</span> /hour
-          </p>
-          <p className="black-small">
-            Planned from the scratch for customized business software,enterprise
-            solutions,SaaS and e-Commerce applications using latest design
-            patterns
-          </p>
-          <div>
-            {" "}
-            <img src={java} className="logo-square-image" />{" "}
-            <img src={aws} className="logo-square-image" />{" "}
-            <img src={hibernate} className="logo-square-image" />{" "}
-            <img src={spring} className="logo-square-image" />{" "}
-          </div>
-        </div> */}
-        {/* </Slider> */}
-        {/* </MediaQuery> */}
+
         <div>
           <br /> <br />
           <p className="black-normal">
@@ -156,8 +91,8 @@ export default class ArModal extends React.Component {
             <Link className="links" to={"/about"}>
               about me
             </Link>
-            .Here you can <span className="links">contact me</span> unless you
-            don't want to
+            {/* .Here you can <span className="links">contact me</span> unless you
+            don't want to */}
           </p>
           <Button label="Go Back" onClick={toggleClose} />
         </div>

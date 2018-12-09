@@ -7,27 +7,15 @@ import Drawer from "react-drag-drawer";
 import ArModal from "../components/ArModal.jsx";
 import InterestedModel from "../components/InterestedModel.jsx";
 import MediaQuery from "react-responsive";
-import { SocialIcon } from "react-social-icons";
+import { SocialMediaLine } from "../components/socialMediaLine.jsx";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-const socialButtonStyles = {
-  backgroundColor: "#fff",
-  borderRadius: 25,
-  borderStyle: "solid",
-  borderColor: "white",
-  borderWidth: 2,
-  height: 40,
-  width: 40,
-  margin: 4,
-  alignSelf: "center"
-};
 
 export class HomePage extends React.Component {
   constructor() {
     super();
     this.state = {
       showArModel: false,
-      showInterestedModel: true
+      showInterestedModel: false
     };
     this.toggleArModal = this.toggleArModal.bind(this);
     this.toggleInterestedModal = this.toggleInterestedModal.bind(this);
@@ -68,20 +56,20 @@ export class HomePage extends React.Component {
             </span>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="#">About</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <a href="#">Work</a>
+                <Link to="/work">Work</Link>
               </li>
               <li>
-                <a href="#">Research</a>
+                <Link to="/contact">Contact</Link>
               </li>
-              <li>
-                <a href="#">Resume</a>
-              </li>
+              {/* <li>
+                <Link href="#">Resume</Link>
+              </li> */}
             </ul>
           </label>
           <RevealText />
@@ -127,39 +115,7 @@ export class HomePage extends React.Component {
                   </u>
                   &nbsp;
                 </p>
-                <div>
-                  <br />
-                  <p className="connect-text">Connect with me &nbsp;&nbsp;</p>
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://www.facebook.com/asela.wijesinghe"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://www.linkedin.com/in/aselawijesinghe-15ntaps/"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="  https://www.meetup.com/members/220513781/"
-                    network="meetup"
-                  />
-
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    color="#333"
-                    url="https://github.com/asela-wijesinghe"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://stackoverflow.com/users/5472761/aze?tab=profile"
-                    color="#FF9653"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://www.instagram.com/azelawijesinghe/"
-                    color="#FF4571"
-                  />
-                </div>
+                <SocialMediaLine />
               </div>
             </MediaQuery>
           </div>

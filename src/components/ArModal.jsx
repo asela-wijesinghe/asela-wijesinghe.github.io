@@ -14,6 +14,8 @@ export default class ArModal extends React.Component {
             mobile and please make sure you allow mobile camera access for the
             browser.After camera has been loaded point the mobile to here and
             keep waiting..
+            <br />
+            (this feature only supports mobile devices with ARCore)
           </p>
           <Button label="Go Back" onClick={toggleClose} />
         </div>

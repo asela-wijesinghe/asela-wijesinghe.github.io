@@ -4,11 +4,16 @@ import Loader from "./components/Loader";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { CommentsSection } from "./pages/blog.jsx";
 import { HomePage } from "./pages/home.jsx";
+import { WorkPage } from "./pages/work.jsx";
+import { ContactPage } from "./pages/contact.jsx";
+import { AboutPage } from "./pages/about.jsx";
 
 import "./assets/css/Style.css";
 import "./assets/css/animations.css";
 import "./assets/css/navigation.css";
 import "./assets/css/models.css";
+import "./assets/css/work.css";
+import "./assets/css/contact.css";
 
 class App extends Component {
   constructor() {
@@ -31,8 +36,9 @@ class App extends Component {
         <Router className="App">
           <div>
             <Route exact path="/" component={HomePage} />
-
-            <Route exact path="/blog" component={CommentsSection} />
+            <Route exact path="/contact" component={ContactPage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/work" component={WorkPage} />
           </div>
         </Router>
       );

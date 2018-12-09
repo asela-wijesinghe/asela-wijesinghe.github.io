@@ -8043,6 +8043,11 @@ react-error-overlay@^5.0.4:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.0.4.tgz#39cf184d770f98b65a2ee59a779d03b8d092b69e"
   integrity sha512-grVJtoDzIbSMYgy5rKbSOmt2FvzR4iJnpMBjXmZolSYJM5acQvBHoEbBBNW0FzTE/TLZMZ+gSy0bAHydc1hFEw==
 
+react-icons@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.2.2.tgz#7b1dc795004a119a35175e62ecef91e5c9c90962"
+  integrity sha512-0DiXTcECUNoMvze2zcFwYYrHAFgQ2rBM0+HIHfaECKRfE1NZYwfuUSbwyg9s1uVPuy7o/KqQKSwBGMWQFvdrhQ==
+
 react-intersection-observer@~3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-3.0.3.tgz#3df67f413c36c28b02426e7fdbf9670790fb50ab"
