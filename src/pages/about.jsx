@@ -1,15 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import abt from "../assets/images/back4.jpg";
 
 export class AboutPage extends React.Component {
-  handleNewComment(comment) {
-    console.log(comment.text);
-  }
-
   render() {
     return (
-      <div className="container animated fadeIn">
+      <div className="container-about animated fadeIn">
         <label>
           <input type="checkbox" />
           <span className="menu">
@@ -33,9 +30,12 @@ export class AboutPage extends React.Component {
             </li> */}
           </ul>
         </label>
-        <br />
-        <br />
-        <span className="heading">ABOUT</span>
+
+        <img src={abt} className="top-img-about" />
+        <div className="bottom-card-about">
+          <span className="heading">ABOUT</span>
+          <div class="arrow bounce" />
+        </div>
       </div>
     );
   }

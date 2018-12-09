@@ -14,6 +14,7 @@ import "./assets/css/navigation.css";
 import "./assets/css/models.css";
 import "./assets/css/work.css";
 import "./assets/css/contact.css";
+import "./assets/css/about.css";
 
 class App extends Component {
   constructor() {

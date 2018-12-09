@@ -1,36 +1,11 @@
 import React from "react";
-import Slider from "react-slick";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-const SamplePrevArrow = props => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-};
+import abt from "../assets/images/back2.jpg";
 
 export class WorkPage extends React.Component {
-  handleNewComment(comment) {
-    console.log(comment.text);
-  }
-
   render() {
-    const settings = {
-      className: "center",
-      infinite: false,
-      slidesToScroll: 1,
-      slidesToShow: 3,
-      vertical: false,
-      dots: false,
-      nextArrow: <SamplePrevArrow />,
-      prevArrow: <SamplePrevArrow />
-    };
     return (
-      <div className="container animated fadeIn">
+      <div className="container-work animated fadeIn">
         <label>
           <input type="checkbox" />
           <span className="menu">
@@ -54,52 +29,13 @@ export class WorkPage extends React.Component {
             </li> */}
           </ul>
         </label>
-        <br />
-        <br />
-        <span className="heading">WORK</span>
-        <Slider {...settings}>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-          <div className="work-card">
-            <h3>1</h3>
-          </div>
-        </Slider>
+
+        <img src={abt} className="top-img-work" />
+        <div className="bottom-card-work">
+          <span className="heading">WORK</span>
+          <div class="arrow bounce" />
+        </div>
       </div>
     );
   }
 }
-// title="Example Thread"
-// url="aselawijesinghe.lk"
-// category_id = "123456";
-// identifier="aselawijesinghe"
