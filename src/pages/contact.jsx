@@ -43,12 +43,12 @@ export class ContactPage extends React.Component {
           <p>KEEP IN TOUCH WITH ME</p>
 
           <p className="contact-text">
-            <FiPhoneCall size="2.2em" />
+            <FiPhoneCall size="2.2rem" />
             &nbsp;&nbsp; <b>phone :</b>
             &nbsp;&nbsp;(+94)719286354
           </p>
           <p className="contact-text">
-            <FiMail size="2.2em" />
+            <FiMail size="2.2rem" />
             &nbsp;&nbsp;<b>email :</b> &nbsp;&nbsp;123azeela@gmail.com
           </p>
           <SocialMediaLine black />
