@@ -40,6 +40,7 @@ class App extends Component {
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/work" component={WorkPage} />
+            <Route exact path="/blog" component={CommentsSection} />
           </div>
         </Router>
       );
