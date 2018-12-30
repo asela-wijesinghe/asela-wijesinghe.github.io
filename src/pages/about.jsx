@@ -108,10 +108,10 @@ export class AboutPage extends React.Component {
               </div>
             </div>
           </div>
-          <span className="heading">ACTIVITY</span>
+          {/* <span className="heading">ACTIVITY</span>
           <div className="row responsive">
 
-          </div>
+          </div> */}
         </div>
 
         <div class="arrow bounce" />
