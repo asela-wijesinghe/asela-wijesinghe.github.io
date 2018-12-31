@@ -10,8 +10,46 @@ import logo4 from "../assets/images/logo4.jpg";
 import logo5 from "../assets/images/logo5.png";
 import logo6 from "../assets/images/logo6.png";
 import logo7 from "../assets/images/logo7.jpg";
+import Masonry from "../components/masonry.jsx"
+import act1 from "../assets/images/activity/act1.jpg";
+import act2 from "../assets/images/activity/act2.png";
+import act3 from "../assets/images/activity/act3.jpg";
+import act4 from "../assets/images/activity/act4.jpg";
+import act5 from "../assets/images/activity/act5.jpg";
+import act6 from "../assets/images/activity/act6.jpg";
+import act7 from "../assets/images/activity/act7.jpg";
+import act8 from "../assets/images/activity/act8.jpeg";
+
+const projectDetails = [
+
+  { src: act4, title: "Competitor - Final 15", techs: [], role: "Launch Pad - Startup Competition 2018" },
+
+
+  { src: act3, title: "Guest Speaker", techs: [], role: "Be-Digitalized 2018 - Rotaract (USJP) " },
+  { src: act7, title: "Hackathon Participant", techs: [], role: "IEEEXtreme, Let Me Hack, Real Hack..." },
+  {
+    src: act2, role: "SL Dev Talks - Podcast Series", techs: [], title: "Vlogger | Co-host"
+  },
+  {
+    src: act6, title: "Panelist", techs: [], role: "Inspire 2017 - Rotaract (USJP)"
+  },
+  { src: act1, role: "Youthhack - Startup Competition 2017", techs: [], title: "Champions - Sri Lanka" },
+
+  { src: act5, title: "Startup Mentorship", techs: [], role: "Venture Frontier -Startup Bootcamp 2017" },
+  { src: act8, title: "Meetup Seeker", techs: [], role: "Meetup.com | RSVP.lk" },
+
+
+]
+
+
 export class AboutPage extends React.Component {
   render() {
+
+    const masonryOptions = {
+      transitionDuration: '0.5s',
+      percentPosition: true,
+      gutter: 10
+    };
     return (
       <div className="container-about animated fadeIn">
         <label>
@@ -108,10 +146,15 @@ export class AboutPage extends React.Component {
               </div>
             </div>
           </div>
-          {/* <span className="heading">ACTIVITY</span>
-          <div className="row responsive">
-
-          </div> */}
+          <span className="heading">ACTIVITIES</span>
+          <br></br>
+          <div className="masonry-container">
+            <Masonry className={'grid'} // default ''
+              elementType={'div'} // default 'div'
+              options={masonryOptions} // default {}
+              elements={projectDetails} >
+            </Masonry>
+          </div>
         </div>
 
         <div class="arrow bounce" />
