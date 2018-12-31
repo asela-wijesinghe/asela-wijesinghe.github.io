@@ -16,14 +16,16 @@ class Gallery extends React.Component {
             return (
 
                 <div class="grid-card">
-                    <img src={element.src} className="project-image" />
-                    <div class="text-container">
-                        <h4 className="title"><b>{element.title}</b></h4>
-                        <p className="sub-title">{element.role}</p>
-                        <div className="tag-container">
-                            {element.techs.map(tech => <p className="tag">{tech}</p>)}
+                    <center>
+                        <img src={element.src} className="project-image" />
+                        <div class="text-container">
+                            <h4 className="title"><b>{element.title}</b></h4>
+                            <p className="sub-title">{element.role}</p>
+                            <div className="tag-container">
+                                {element.techs.map(tech => <p className="tag">{tech}</p>)}
+                            </div>
                         </div>
-                    </div>
+                    </center>
                 </div>
 
             );

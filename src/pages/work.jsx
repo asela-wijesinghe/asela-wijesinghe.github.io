@@ -43,7 +43,7 @@ export class WorkPage extends React.Component {
     const masonryOptions = {
       transitionDuration: '0.5s',
       percentPosition: true,
-
+      gutter: 10
     };
     return (
       <div className="container-work animated fadeIn">
@@ -74,6 +74,11 @@ export class WorkPage extends React.Component {
         <img src={abt} className="top-img-work" />
         <div className="bottom-card-work">
           <span className="heading">WORK</span>
+          <div className="project-summary-container">
+
+            <p>Software Development &nbsp;| &nbsp;</p>
+            <p>Mobile Application Development &nbsp;|&nbsp; </p>
+            <p>Web Development  </p></div>
           <div className="masonry-container">
             <Masonry className={'grid'} // default ''
               elementType={'div'} // default 'div'
@@ -81,6 +86,12 @@ export class WorkPage extends React.Component {
               elements={projectDetails} >
             </Masonry>
           </div>
+          <center>
+            <div className="project-summary-container column">
+              <h5 className="big-num">20+</h5>
+              <p>All projects</p>
+            </div>
+          </center>
           <div class="arrow bounce" />
         </div>
       </div>
