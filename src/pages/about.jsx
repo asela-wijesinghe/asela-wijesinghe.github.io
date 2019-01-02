@@ -18,6 +18,7 @@ import act4 from "../assets/images/activity/act4.jpg";
 import act5 from "../assets/images/activity/act5.jpg";
 import act6 from "../assets/images/activity/act6.jpg";
 import act7 from "../assets/images/activity/act7.jpg";
+// import act9 from "../assets/images/activity/act9.jpg";
 import act8 from "../assets/images/activity/act8.jpeg";
 
 const projectDetails = [
@@ -37,6 +38,7 @@ const projectDetails = [
 
   { src: act5, title: "Startup Mentorship", techs: [], role: "Venture Frontier -Startup Bootcamp 2017" },
   { src: act8, title: "Meetup Seeker", techs: [], role: "Meetup.com | RSVP.lk" },
+  // { src: act9, title: "Recognition for projects", techs: [], role: "CMJD / ABSD - IJSE" },
 
 
 ]
@@ -110,7 +112,7 @@ export class AboutPage extends React.Component {
                 <img src={logo4} className="avatar" />
                 <div className="column">
                   <h4>General | Marketing executive</h4>
-                  <p>Tuition Factory</p>
+                  <p>CV.lk</p>
                   <p>2014-2015</p>
                 </div>
               </div>

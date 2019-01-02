@@ -3,23 +3,22 @@
   width: 100vw;
   overflow: hidden;
   /* temporary */
-  background-color: #fff;
+  background-color: #333;
 }
 
 .bg-img {
   position: relative;
   width: 100%;
   height: 100%;
-
   background: url("https://imgur.com/ltiAppv.jpg") center center no-repeat;
   background-size: cover;
   z-index: 0;
 }
+
 .bg-img:after {
   content: "";
   z-index: -1;
   position: absolute;
-
   top: 0;
   right: 0;
   bottom: 0;
@@ -51,13 +50,10 @@
   flex-direction: row;
   padding-right: 0px;
   padding-left: 0px;
-  background-image: linear-gradient(
-    to top,
-    rgba(22, 22, 22, 1),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient( to top, rgba(22, 22, 22, 1), rgba(0, 0, 0, 0));
   /* background-color: rgba(22, 22, 22, 1); */
 }
+
 .footer-right {
   position: fixed;
   max-height: 50px;
@@ -71,11 +67,7 @@
   flex-direction: row;
   padding-right: 0px;
   padding-left: 0px;
-  background-image: linear-gradient(
-    to top,
-    rgba(22, 22, 22, 1),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient( to top, rgba(22, 22, 22, 1), rgba(0, 0, 0, 0));
   /* background-color: rgba(22, 22, 22, 1); */
 }
 
@@ -92,7 +84,6 @@
     justify-content: center;
     flex-direction: row;
   }
-
   .footer-left {
     visibility: hidden;
   }
@@ -104,17 +95,20 @@
 }
 
 /* //typed css */
+
 .typed-cursor {
   opacity: 1;
   animation: typedjsBlink 0.7s infinite;
   -webkit-animation: typedjsBlink 0.7s infinite;
   animation: typedjsBlink 0.7s infinite;
 }
+
 @keyframes typedjsBlink {
   50% {
     opacity: 0;
   }
 }
+
 @-webkit-keyframes typedjsBlink {
   0% {
     opacity: 1;
@@ -126,6 +120,7 @@
     opacity: 1;
   }
 }
+
 .typed-fade-out {
   opacity: 0;
   transition: opacity 0.25s;
@@ -150,6 +145,7 @@
 }
 
 /* //side div */
+
 .left-div {
   display: flex;
   flex-direction: column;
@@ -171,13 +167,11 @@
     justify-content: space-between;
     text-align: center;
   }
-
   .resp-text {
     margin-top: 5px !important;
     font-size: 2.2em !important;
     align-self: center;
   }
-
   .res-div {
     text-align: center;
     display: flex;
@@ -221,13 +215,13 @@
   font-size: 20px;
   /* text-transform: uppercase; */
 }
+
 .black-small {
   color: rgba(33, 33, 33, 0.8);
   margin: 20px;
   margin-top: 20px;
   font-size: 18px;
   text-align: center;
-
   /* text-transform: uppercase; */
 }
 
@@ -281,7 +275,6 @@ button {
   margin-top: 25px;
   font-size: 18px;
   background-color: #333;
-
   padding-top: 10px;
   padding-bottom: 10px;
   /* padding: 0.2em 1em; */
@@ -340,6 +333,7 @@ button:hover {
 }
 
 /* --- disqus css -- */
+
 .textarea-wrapper {
   color: orange !important;
 }
@@ -353,6 +347,7 @@ button:hover {
 }
 
 /* //connect-text */
+
 .connect-text {
   color: white;
   font-size: 16px;

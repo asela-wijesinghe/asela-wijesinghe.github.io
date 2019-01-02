@@ -38,7 +38,18 @@
   color: #000;
 }
 
+.icons {
+  font-size: 2.2rem;
+}
+
 @media (max-width: 768px) {
+  .icons {
+    font-size: 1.2rem;
+    width: 20px;
+  }
+  .download-container {
+    margin-top: 5px;
+  }
   .contact-container {
     position: absolute;
     width: 100%;
@@ -49,7 +60,9 @@
     overflow: hidden;
     background-color: #f8f8f8;
   }
-
+  .contact-text {
+    font-size: 18px;
+  }
   .right-img {
     width: auto;
     height: 100%;
@@ -57,7 +70,6 @@
     /* background: url("https://i.imgur.com/DTWgusr.jpg") center center no-repeat; */
     /* background-size: cover; */
   }
-
   .left-card {
     position: absolute;
     width: 100%;
@@ -69,9 +81,21 @@
     z-index: 1;
     justify-content: center;
   }
-
   .black-text {
     text-align: center;
     color: #000;
   }
+}
+
+.download-container a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: #000 solid 3px;
+}
+
+.download-container a:hover {
+  color: #fff;
+  background-color: #000;
 }
