@@ -19,26 +19,34 @@ import act5 from "../assets/images/activity/act5.jpg";
 import act6 from "../assets/images/activity/act6.jpg";
 import act7 from "../assets/images/activity/act7.jpg";
 // import act9 from "../assets/images/activity/act9.jpg";
+import act11 from "../assets/images/activity/act11.jpg";
+import act10 from "../assets/images/activity/act10.jpg";
 import act8 from "../assets/images/activity/act8.jpeg";
 
 const projectDetails = [
-
-  { src: act4, title: "Competitor - Final 15", techs: [], role: "Launch Pad - Startup Competition 2018" },
-
-
-  { src: act3, title: "Guest Speaker", techs: [], role: "Be-Digitalized 2018 - Rotaract (USJP) " },
-  { src: act7, title: "Hackathon Participant", techs: [], role: "IEEEXtreme, Let Me Hack, Real Hack..." },
-  {
-    src: act2, role: "SL Dev Talks - Podcast Series", techs: [], title: "Vlogger | Co-host"
-  },
   {
     src: act6, title: "Panelist", techs: [], role: "Inspire 2017 - Rotaract (USJP)"
   },
+
+
+
+  { src: act3, title: "Guest Speaker", techs: [], role: "Be-Digitalized 2018 - Rotaract (USJP) " },
+
+  { src: act11, title: "One of Sri Lankan Finalists", techs: [], role: "GSEA 2019 ( Global Student Entreprenuer Awards )" },
+  { src: act10, title: "Contributor to Opensource", techs: [], role: "Opensource.lk" },
+  {
+    src: act2, role: "SL Dev Talks - Podcast Series", techs: [], title: "Vlogger | Co-host"
+  },
+
+
   { src: act1, role: "Youthhack - Startup Competition 2017", techs: [], title: "Champions - Sri Lanka" },
 
   { src: act5, title: "Startup Mentorship", techs: [], role: "Venture Frontier -Startup Bootcamp 2017" },
   { src: act8, title: "Meetup Seeker", techs: [], role: "Meetup.com | RSVP.lk" },
   // { src: act9, title: "Recognition for projects", techs: [], role: "CMJD / ABSD - IJSE" },
+
+  { src: act4, title: "Competitor - Final 15", techs: [], role: "Launch Pad - Startup Competition 2018" },
+  { src: act7, title: "Hackathon Participant", techs: [], role: "IEEEXtreme, Let Me Hack, Real Hack..." },
 
 
 ]
