@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Loader from "./components/Loader";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { CommentsSection } from "./pages/blog.jsx";
+
 import { HomePage } from "./pages/home.jsx";
 import { WorkPage } from "./pages/work.jsx";
 import { ContactPage } from "./pages/contact.jsx";
@@ -34,13 +34,13 @@ class App extends Component {
       return <Loader />;
     } else {
       return (
-        <Router className="App">
+        <Router className="App" basename={process.env.PUBLIC_URL}>
           <div>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/work" component={WorkPage} />
-            <Route exact path="/blog" component={CommentsSection} />
+
           </div>
         </Router>
       );

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "disqus-react": "^1.0.5",
     "gh-pages": "^2.0.1",
     "loaders.css": "^0.1.2",
     "react": "^16.5.2",
