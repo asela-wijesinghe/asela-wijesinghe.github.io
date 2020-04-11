@@ -228,9 +228,14 @@
 .ar-info {
   align-self: center;
   align-items: center;
-  margin-right: 20px;
+  margin: 20;
+  /* margin-right: 20px; */
 }
 
+.padding_20 {
+  padding: 20 !important;
+  margin: 20;
+}
 .test-card {
   background-color: red;
   align-self: center;
@@ -369,3 +374,10 @@ button:hover {
   overflow: hidden;
   background-color: #f8f8f8;
 }
+
+/* //slick */
+.slick-card {
+   z-index: 100; 
+  background-color: red; 
+  width: 100;
+   height: 100}

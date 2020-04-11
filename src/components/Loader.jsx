@@ -21,8 +21,8 @@ export default class Loader extends React.Component {
           <div />
           <div />
         </div>
-        <br />
-        <h3 className="animated fadeIn">Loading...</h3>
+        {/* <br /> */}
+        <h3 className="animated fadeIn">Please Wait...</h3>
       </div>
     );
   }

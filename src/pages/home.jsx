@@ -4,25 +4,31 @@ import TypedText from "../components/TypedText";
 import Button from "../components/Button";
 import qr from "../assets/images/qr.png";
 import Drawer from "react-drag-drawer";
-import ArModal from "../components/ArModal.jsx";
+import VideoModal from "../components/VideoModal.jsx";
 import InterestedModel from "../components/InterestedModel.jsx";
 import MediaQuery from "react-responsive";
 import { SocialMediaLine } from "../components/socialMediaLine.jsx";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+const videoData = [
+  "https://www.facebook.com/RiseAndShineLive/videos/788793621552736/",
+  "https://youtu.be/9A7tUvSYMpw",
+  "https://youtu.be/woNvL0nmsZ4?list=PLVsj5fppngPT7cAWK44FnVFvjKgX9fjQy&t=1228"
+]
 export class HomePage extends React.Component {
   constructor() {
     super();
     this.state = {
-      showArModel: false,
+      selectedVideo: null,
+      showVideoModel: false,
       showInterestedModel: false
     };
-    this.toggleArModal = this.toggleArModal.bind(this);
+    this.toggleVideoModal = this.toggleVideoModal.bind(this);
     this.toggleInterestedModal = this.toggleInterestedModal.bind(this);
   }
 
-  toggleArModal() {
-    this.setState({ showArModel: !this.state.showArModel });
+  toggleVideoModal() {
+    this.setState({ showVideoModel: !this.state.showVideoModel });
   }
 
   toggleInterestedModal() {
@@ -30,15 +36,18 @@ export class HomePage extends React.Component {
   }
 
   render() {
-    const { showArModel, showInterestedModel } = this.state;
+    const { showVideoModel, showInterestedModel,selectedVideo } = this.state;
     return (
       <div className="App ">
         <Drawer
-          open={showArModel}
-          onRequestClose={this.toggleArModal}
+          open={showVideoModel}
+          onRequestClose={this.toggleVideoModal}
           modalElementClass={"modal"}
         >
-          <ArModal toggleClose={this.toggleArModal} />
+          <VideoModal
+          
+          videoURL={selectedVideo} 
+          toggleClose={this.toggleVideoModal} />
         </Drawer>
         <Drawer
           open={showInterestedModel}
@@ -65,6 +74,12 @@ export class HomePage extends React.Component {
                 <Link to="/work">Work</Link>
               </li>
               <li>
+                <Link to="/contact">Research/Publications</Link>
+              </li>
+              <li>
+                <Link to="/contact">Blog</Link>
+              </li>
+              <li>
                 <Link to="/contact">Contact</Link>
               </li>
               {/* <li>
@@ -74,7 +89,7 @@ export class HomePage extends React.Component {
           </label>
           <RevealText />
           <div className="main-div">
-            <div className="left-div">
+            <div className="left-div animated slideInLeft">
               <div className="res-div">
                 <h3 className="white-text resp-text">Hello, There..</h3>
                 <p className="white-text white-back resp-text">i am a</p>
@@ -91,9 +106,8 @@ export class HomePage extends React.Component {
               </div>
               <div className="res-div">
                 <p className="white-small right-padding">
-                  Surf through my work and if you are interested you can hire me
-                  as a developer or you can outsource the project to my
-                  company...
+                  Surf through my work, if you are interested you can hire me to develop a tailor made software solution for you..
+                  
                 </p>
                 <Button
                   label="I'm interested"
@@ -102,16 +116,19 @@ export class HomePage extends React.Component {
               </div>
             </div>
             <MediaQuery query="(min-width: 769px)">
-              <div className="right-div">
-                <img src={qr} className="qr-image" />
+              <div className="right-div animated slideInRight fadeIn">
+              {/* <Slick /> */}
                 <p className="white-small padding">
-                  Wanna see some magic? Scan the code & <br />
+                  Wanna know me better? here's some videos from our latest research products including "The Sorting Hat"<br />
                   <u className="modal_open">
                     <span
                       className="modal_open"
-                      onClick={() => this.setState({ showArModel: true })}
+                      onClick={() => this.setState({
+                         showVideoModel: true ,
+                         selectedVideo: videoData[1]
+                        })}
                     >
-                      click here
+                     Click here
                     </span>
                   </u>
                   &nbsp;
@@ -120,9 +137,9 @@ export class HomePage extends React.Component {
               </div>
             </MediaQuery>
           </div>
-          <div className="footer-left">
+          <div className="footer-left animated slideInUp fadeIn" >
             <p className="footer-text">
-              Copyright &copy; 2018. All rights reserved | &nbsp;
+              Copyright &copy;{new Date().getFullYear()}. All rights reserved | &nbsp;
             </p>
           </div>
           {/* <SocialIcon
@@ -155,7 +172,7 @@ export class HomePage extends React.Component {
               color="#FF4571"
             /> */}
 
-          <div className="footer-right">
+          <div className="footer-right animated slideInUp fadeIn">
             <p className="footer-text">Made with</p>
             <div class="lds-heart">
               <div />
