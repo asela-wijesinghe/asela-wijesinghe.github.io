@@ -22,7 +22,7 @@ export default class Loader extends React.Component {
           <div />
         </div>
         {/* <br /> */}
-        <h3 className="animated fadeIn">Please Wait...</h3>
+        <h3 className="animated fadeIn">Coming right up...</h3>
       </div>
     );
   }

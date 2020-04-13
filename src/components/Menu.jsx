@@ -18,12 +18,12 @@ export const MenuComponent = ()=> {
           <li>
             <Link to="/work">Work</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/contact">Publications</Link>
           </li>
           <li>
             <Link to="/contact">Blog</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/contact">Contact</Link>
           </li>

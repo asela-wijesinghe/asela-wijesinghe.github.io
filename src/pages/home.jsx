@@ -2,7 +2,7 @@ import React from "react";
 import RevealText from "../components/RevealText";
 import TypedText from "../components/TypedText";
 import Button from "../components/Button";
-import qr from "../assets/images/qr.png";
+
 import Drawer from "react-drag-drawer";
 import VideoModal from "../components/VideoModal.jsx";
 import InterestedModel from "../components/InterestedModel.jsx";
