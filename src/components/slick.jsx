@@ -1,25 +1,56 @@
 import React, { Component } from "react";
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
-import imageOne  from "../assets/images/projects/dance1.jpeg";
-import imageTwo  from "../assets/images/projects/dance1.jpeg";
-import imageThree  from "../assets/images/projects/dance1.jpeg";
-export default class AutoPlay extends Component {
-  render() {
+import Slider from "react-slick";
+import { withRouter } from "react-router";
 
+
+
+export default class SimpleSlider extends Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: false,
+      speed: 2000,
+      autoplaySpeed: 2500,
+      // cssEase: "linear"
+    };
     return (
-     <Carousel
-     
-  autoPlay={2000}
-  animationSpeed={1000}
-  infinite
->
-     
-<img src={imageOne} />
-        <img src={imageTwo} />
-        <img src={imageThree} />
-     
-       </Carousel>
+      <div>
+        <Slider {...settings}>
+       {this.props.sliderData.map(element => {
+         return(
+           <div style={{
+             display: "flex",
+             justifyContent: "center",
+                                      alignItems: "center",
+           }}>
+             <center>
+            <img src={element.url} 
+            onClick={()=>this.props.onClick(element.videoURL)}
+            style={{
+              cursor: "pointer",
+             border: "solid",
+            borderRadius: "20px",
+            borderColor: "#eee",
+            borderWidth: "5px",
+            maxWidth: "210px",
+          }}
+/>
+         <p  >{element.title}</p>
+         
+         </center>
+
+
+</div>
+         )
+         
+       })}
+        </Slider>
+      </div>
+ 
     );
   }
 }

@@ -13,6 +13,7 @@ import stock from "../assets/images/projects/stock.png";
 import rex from "../assets/images/projects/rex.png";
 import prod from "../assets/images/projects/prod.png";
 import smartk from "../assets/images/projects/smartk.png";
+import { MenuComponent } from "../components/Menu.jsx";
 
 const projectDetails = [
   { src: med, title: "MedicalFactory- Medical Center Software", techs: ["react", "firebase", "redux", "javaEE", "spring boot"], role: "Project Lead / Full Stack Developer" },
@@ -47,30 +48,7 @@ export class WorkPage extends React.Component {
     };
     return (
       <div className="container-work animated fadeIn">
-        <label>
-          <input type="checkbox" />
-          <span className="menu">
-            <span className="hamburger" />
-          </span>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/work">Work</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            {/* <li>
-              <Link href="#">Resume</Link>
-            </li> */}
-          </ul>
-        </label>
-
+                 <MenuComponent/>
         <img src={abt} className="top-img-work" />
         <div className="bottom-card-work">
           <span className="heading">WORK</span>
