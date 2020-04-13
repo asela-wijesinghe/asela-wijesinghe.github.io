@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.13.26",
+    "disqus-react": "^1.0.5",
     "gh-pages": "^2.0.1",
     "loaders.css": "^0.1.2",
     "react": "^16.5.2",
@@ -10,13 +12,18 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.5.2",
     "react-drag-drawer": "^3.3.0",
+    "react-icons": "^3.2.2",
     "react-loaders": "^3.0.1",
+    "react-masonry-component": "^6.2.1",
+    "react-player": "^1.15.3",
     "react-responsive": "^6.0.1",
     "react-reveal-text": "^0.1.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
+    "react-slick": "^0.25.2",
     "react-social-icons": "^3.0.0",
+    "slick-carousel": "^1.8.1",
     "typed.js": "^2.0.9"
   },
   "scripts": {
@@ -24,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build && git checkout master && git merge --no-edit gh-pages && git push origin master",
+    "deploy": "npm run build && gh-pages -d build && git checkout master && git merge --no-edit origin/gh-pages && git push origin master",
     "clean": "rm -rf build/*"
   },
   "eslintConfig": {
@@ -35,5 +42,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.19.0",
+    "prettier": "^2.0.4",
+    "pretty-quick": "^2.0.1"
+  }
 }

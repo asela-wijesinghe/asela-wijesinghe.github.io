@@ -2,77 +2,75 @@ import React from "react";
 import RevealText from "../components/RevealText";
 import TypedText from "../components/TypedText";
 import Button from "../components/Button";
-import qr from "../assets/images/qr.png";
-import Drawer from "react-drag-drawer";
-import ArModal from "../components/ArModal.jsx";
-import MediaQuery from "react-responsive";
-import { SocialIcon } from "react-social-icons";
 
-const socialButtonStyles = {
-  backgroundColor: "#fff",
-  borderRadius: 25,
-  borderStyle: "solid",
-  borderColor: "white",
-  borderWidth: 2,
-  height: 40,
-  width: 40,
-  margin: 4,
-  alignSelf: "center"
-};
+import Drawer from "react-drag-drawer";
+import VideoModal from "../components/VideoModal.jsx";
+import InterestedModel from "../components/InterestedModel.jsx";
+import MediaQuery from "react-responsive";
+import { SocialMediaLine } from "../components/socialMediaLine.jsx";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { MenuComponent } from "../components/Menu";
+import Slick from "../components/slick";
+
+
+import Rupavahini from "../assets/images/videos/Rupavahini.png";
+import ChannelEye from "../assets/images/videos/channelEye.png";
+import Siyatha from "../assets/images/videos/Siyatha.png";
+
+const sliderData = [
+  { title: "ChannelEye - RiseNShine", url: ChannelEye , videoURL: "https://www.facebook.com/RiseAndShineLive/videos/788793621552736/"},  
+  { title: "Rupavahini KnowledgeFirst", url:Rupavahini, videoURL: "https://youtu.be/woNvL0nmsZ4?list=PLVsj5fppngPT7cAWK44FnVFvjKgX9fjQy&t=1228"},  
+  { title: "SiyathaTV Morning Show", url:Siyatha,videoURL: "https://youtu.be/9A7tUvSYMpw"},  
+  ]
+
 export class HomePage extends React.Component {
   constructor() {
     super();
     this.state = {
-      showModal: false
+      selectedVideo: null,
+      showVideoModel: false,
+      showInterestedModel: false
     };
-
-    this.toggleModal = this.toggleModal.bind(this);
+    this.toggleVideoModal = this.toggleVideoModal.bind(this);
+    this.toggleInterestedModal = this.toggleInterestedModal.bind(this);
   }
 
-  toggleModal() {
-    this.setState({ showModal: !this.state.showModal });
+  toggleVideoModal() {
+    this.setState({ showVideoModel: !this.state.showVideoModel });
+  }
+
+  toggleInterestedModal() {
+    this.setState({ showInterestedModel: !this.state.showInterestedModel });
   }
 
   render() {
-    const { showModal } = this.state;
+    const { showVideoModel, showInterestedModel,selectedVideo } = this.state;
     return (
       <div className="App ">
         <Drawer
-          open={showModal}
-          onRequestClose={this.toggleModal}
+          open={showVideoModel}
+          onRequestClose={this.toggleVideoModal}
           modalElementClass={"modal"}
         >
-          <ArModal toggleClose={this.toggleModal} />
+          <VideoModal
+          
+          videoURL={selectedVideo} 
+          toggleClose={this.toggleVideoModal} />
         </Drawer>
-
+        <Drawer
+          open={showInterestedModel}
+          onRequestClose={this.toggleInterestedModal}
+          modalElementClass={"lg-modal"}
+        >
+          <InterestedModel toggleClose={this.toggleInterestedModal} />
+        </Drawer>
         <div className="bg-img animated fadeIn">
           <br />
-          <label>
-            <input type="checkbox" />
-            <span className="menu">
-              <span className="hamburger" />
-            </span>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Work</a>
-              </li>
-              <li>
-                <a href="#">Research</a>
-              </li>
-              <li>
-                <a href="#">Resume</a>
-              </li>
-            </ul>
-          </label>
+         <MenuComponent/>
           <RevealText />
+          
           <div className="main-div">
-            <div className="left-div">
+            <div className="left-div animated slideInLeft">
               <div className="res-div">
                 <h3 className="white-text resp-text">Hello, There..</h3>
                 <p className="white-text white-back resp-text">i am a</p>
@@ -80,6 +78,7 @@ export class HomePage extends React.Component {
                   strings={[
                     "Believer",
                     "Technopreneur",
+                    "UX Lover",
                     "Full Stack Engineer",
                     "Product Developer"
                     // "HTML characters &times; &copy;"
@@ -88,100 +87,51 @@ export class HomePage extends React.Component {
               </div>
               <div className="res-div">
                 <p className="white-small right-padding">
-                  Surf through my work and if you are interested you can hire me
-                  as a developer or you can outsource the project to my
-                  company...
+                  Surf through my work, if you are interested you can hire me to develop a tailor made software solution for you..
+                  
                 </p>
-                <Button label="I'm interested" />
+                <Button
+                  label="I'm interested"
+                  onClick={() => this.setState({ showInterestedModel: true })}
+                />
               </div>
             </div>
-            <MediaQuery query="(min-width: 1024px)">
-              <div className="right-div">
-                <img src={qr} className="qr-image" />
-                <p className="white-small padding">
-                  Wanna see some magic? Scan the code & <br />
-                  <u className="modal_open">
-                    <span
-                      className="modal_open"
-                      onClick={() => this.setState({ showModal: true })}
-                    >
-                      click here
-                    </span>
-                  </u>
-                  &nbsp;
-                </p>
-                <div>
-                  <br />
-                  <p className="connect-text">Connect with me &nbsp;&nbsp;</p>
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://www.facebook.com/asela.wijesinghe"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://www.linkedin.com/in/aselawijesinghe-15ntaps/"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="  https://www.meetup.com/members/220513781/"
-                    network="meetup"
-                  />
 
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    color="#333"
-                    url="https://github.com/asela-wijesinghe"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://stackoverflow.com/users/5472761/aze?tab=profile"
-                    color="#FF9653"
-                  />
-                  <SocialIcon
-                    style={socialButtonStyles}
-                    url="https://www.instagram.com/azelawijesinghe/"
-                    color="#FF4571"
-                  />
+         
+            <MediaQuery query="(min-width: 769px)">
+              
+            
+              <div className="right-div animated slideInRight fadeIn">
+            
+                <p className="white-small padding">
+                  <center>
+                <div style={{  maxWidth: "250px", alignSelf : "center"}}>
+                                  <Slick 
+                sliderData={sliderData}
+                 onClick={(videoURL) => this.setState({
+                         showVideoModel: true ,
+                         selectedVideo: videoURL
+                        })}/>
+                        
                 </div>
+                </center>
+                  Wanna know me better? here are some videos from our latest research products including "The Sorting Hat"<br />
+                 &nbsp;
+                </p>
+                <SocialMediaLine />
               </div>
             </MediaQuery>
           </div>
-          <div className="footer-left">
+   
+          <div className="footer-left animated slideInUp fadeIn" >
+         
             <p className="footer-text">
-              Copyright &copy; 2018. All rights reserved | &nbsp;
+              Copyright &copy;{new Date().getFullYear()}. All rights reserved | &nbsp;
             </p>
           </div>
-          {/* <SocialIcon
-              style={socialButtonStyles}
-              url="https://www.facebook.com/asela.wijesinghe"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="https://www.linkedin.com/in/aselawijesinghe-15ntaps/"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="  https://www.meetup.com/members/220513781/"
-              network="meetup"
-            />
-
-            <SocialIcon
-              style={socialButtonStyles}
-              color="#ccc"
-              url="https://github.com/asela-wijesinghe"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="https://stackoverflow.com/users/5472761/aze?tab=profile"
-              color="#FF9653"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="https://www.instagram.com/azelawijesinghe/"
-              color="#FF4571"
-            /> */}
-
-          <div className="footer-right">
+      
+          <div className="footer-right animated slideInUp fadeIn">
+        
             <p className="footer-text">Made with</p>
             <div class="lds-heart">
               <div />
