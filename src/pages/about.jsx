@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import abt from "../assets/images/back4.jpg";
+import abt from "../assets/images/back4.png";
 import logo1 from "../assets/images/logo1.jpg";
 import prof from "../assets/images/prof.png";
 import logo2 from "../assets/images/logo2.jpg";
@@ -21,9 +21,24 @@ import act7 from "../assets/images/activity/act7.jpg";
 // import act9 from "../assets/images/activity/act9.jpg";
 import act11 from "../assets/images/activity/act11.jpg";
 import act10 from "../assets/images/activity/act10.jpg";
+import calcey from "../assets/images/activity/calcey.jpg";
+import icsr from "../assets/images/activity/icsr.jpg";
+import kelaniya from "../assets/images/activity/kelaniya.jpg";
 import act8 from "../assets/images/activity/act8.jpeg";
 
+import { MenuComponent } from "../components/Menu";
+
 const projectDetails = [
+  
+  {
+    src: calcey, title: "Public Session @Calcey Technologies", techs: [], role: "Discover Magic in the Hat"
+  },
+  {
+    src: icsr, title: "Global Winners - Hardware Innovation", techs: [], role: "ICSR 2019 (Madrid, Spain)"
+  },
+  {
+    src: kelaniya, title: "Guest Session", techs: [], role: "Industrial Management, University of Kelaniya"
+  },
   {
     src: act6, title: "Panelist", techs: [], role: "Inspire 2017 - Rotaract (USJP)"
   },
@@ -62,29 +77,7 @@ export class AboutPage extends React.Component {
     };
     return (
       <div className="container-about animated fadeIn">
-        <label>
-          <input type="checkbox" />
-          <span className="menu">
-            <span className="hamburger" />
-          </span>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/work">Work</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            {/* <li>
-              <Link href="#">Resume</Link>
-            </li> */}
-          </ul>
-        </label>
+               <MenuComponent/>
 
         <img src={abt} className="top-img-about" />
         <div className="bottom-card-about">

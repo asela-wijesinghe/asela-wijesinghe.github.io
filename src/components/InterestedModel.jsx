@@ -22,7 +22,7 @@ export default class ArModal extends React.Component {
       <div className="big_model_container">
         <div>
           <p className="black-normal">
-            You seems interested, why don't you check what i do?
+            You seem interested, why don't you reach out to me?
           </p>
           <br />
         </div>
@@ -61,7 +61,7 @@ export default class ArModal extends React.Component {
             <img src={firebase} className="logo-square-image" />{" "}
           </div>
           <div className="card">
-            <h3>Software Developing</h3>
+            <h3>Fullstack Developing</h3>
             <p className="pricing-small">
               $ <span className="pricing">40</span> /hour
             </p>

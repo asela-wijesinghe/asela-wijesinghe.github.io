@@ -2,27 +2,41 @@ import React from "react";
 import RevealText from "../components/RevealText";
 import TypedText from "../components/TypedText";
 import Button from "../components/Button";
-import qr from "../assets/images/qr.png";
+
 import Drawer from "react-drag-drawer";
-import ArModal from "../components/ArModal.jsx";
+import VideoModal from "../components/VideoModal.jsx";
 import InterestedModel from "../components/InterestedModel.jsx";
 import MediaQuery from "react-responsive";
 import { SocialMediaLine } from "../components/socialMediaLine.jsx";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { MenuComponent } from "../components/Menu";
+import Slick from "../components/slick";
+
+
+import Rupavahini from "../assets/images/videos/Rupavahini.png";
+import ChannelEye from "../assets/images/videos/channelEye.png";
+import Siyatha from "../assets/images/videos/Siyatha.png";
+
+const sliderData = [
+  { title: "ChannelEye - RiseNShine", url: ChannelEye , videoURL: "https://www.facebook.com/RiseAndShineLive/videos/788793621552736/"},  
+  { title: "Rupavahini KnowledgeFirst", url:Rupavahini, videoURL: "https://youtu.be/woNvL0nmsZ4?list=PLVsj5fppngPT7cAWK44FnVFvjKgX9fjQy&t=1228"},  
+  { title: "SiyathaTV Morning Show", url:Siyatha,videoURL: "https://youtu.be/9A7tUvSYMpw"},  
+  ]
 
 export class HomePage extends React.Component {
   constructor() {
     super();
     this.state = {
-      showArModel: false,
+      selectedVideo: null,
+      showVideoModel: false,
       showInterestedModel: false
     };
-    this.toggleArModal = this.toggleArModal.bind(this);
+    this.toggleVideoModal = this.toggleVideoModal.bind(this);
     this.toggleInterestedModal = this.toggleInterestedModal.bind(this);
   }
 
-  toggleArModal() {
-    this.setState({ showArModel: !this.state.showArModel });
+  toggleVideoModal() {
+    this.setState({ showVideoModel: !this.state.showVideoModel });
   }
 
   toggleInterestedModal() {
@@ -30,15 +44,18 @@ export class HomePage extends React.Component {
   }
 
   render() {
-    const { showArModel, showInterestedModel } = this.state;
+    const { showVideoModel, showInterestedModel,selectedVideo } = this.state;
     return (
       <div className="App ">
         <Drawer
-          open={showArModel}
-          onRequestClose={this.toggleArModal}
+          open={showVideoModel}
+          onRequestClose={this.toggleVideoModal}
           modalElementClass={"modal"}
         >
-          <ArModal toggleClose={this.toggleArModal} />
+          <VideoModal
+          
+          videoURL={selectedVideo} 
+          toggleClose={this.toggleVideoModal} />
         </Drawer>
         <Drawer
           open={showInterestedModel}
@@ -49,32 +66,11 @@ export class HomePage extends React.Component {
         </Drawer>
         <div className="bg-img animated fadeIn">
           <br />
-          <label>
-            <input type="checkbox" />
-            <span className="menu">
-              <span className="hamburger" />
-            </span>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/work">Work</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-              {/* <li>
-                <Link href="#">Resume</Link>
-              </li> */}
-            </ul>
-          </label>
+         <MenuComponent/>
           <RevealText />
+          
           <div className="main-div">
-            <div className="left-div">
+            <div className="left-div animated slideInLeft">
               <div className="res-div">
                 <h3 className="white-text resp-text">Hello, There..</h3>
                 <p className="white-text white-back resp-text">i am a</p>
@@ -91,9 +87,8 @@ export class HomePage extends React.Component {
               </div>
               <div className="res-div">
                 <p className="white-small right-padding">
-                  Surf through my work and if you are interested you can hire me
-                  as a developer or you can outsource the project to my
-                  company...
+                  Surf through my work, if you are interested you can hire me to develop a tailor made software solution for you..
+                  
                 </p>
                 <Button
                   label="I'm interested"
@@ -101,61 +96,42 @@ export class HomePage extends React.Component {
                 />
               </div>
             </div>
+
+         
             <MediaQuery query="(min-width: 769px)">
-              <div className="right-div">
-                <img src={qr} className="qr-image" />
+              
+            
+              <div className="right-div animated slideInRight fadeIn">
+            
                 <p className="white-small padding">
-                  Wanna see some magic? Scan the code & <br />
-                  <u className="modal_open">
-                    <span
-                      className="modal_open"
-                      onClick={() => this.setState({ showArModel: true })}
-                    >
-                      click here
-                    </span>
-                  </u>
-                  &nbsp;
+                  <center>
+                <div style={{  maxWidth: "250px", alignSelf : "center"}}>
+                                  <Slick 
+                sliderData={sliderData}
+                 onClick={(videoURL) => this.setState({
+                         showVideoModel: true ,
+                         selectedVideo: videoURL
+                        })}/>
+                        
+                </div>
+                </center>
+                  Wanna know me better? here are some videos from our latest research products including "The Sorting Hat"<br />
+                 &nbsp;
                 </p>
                 <SocialMediaLine />
               </div>
             </MediaQuery>
           </div>
-          <div className="footer-left">
+   
+          <div className="footer-left animated slideInUp fadeIn" >
+         
             <p className="footer-text">
-              Copyright &copy; 2018. All rights reserved | &nbsp;
+              Copyright &copy;{new Date().getFullYear()}. All rights reserved | &nbsp;
             </p>
           </div>
-          {/* <SocialIcon
-              style={socialButtonStyles}
-              url="https://www.facebook.com/asela.wijesinghe"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="https://www.linkedin.com/in/aselawijesinghe-15ntaps/"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="  https://www.meetup.com/members/220513781/"
-              network="meetup"
-            />
-
-            <SocialIcon
-              style={socialButtonStyles}
-              color="#ccc"
-              url="https://github.com/asela-wijesinghe"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="https://stackoverflow.com/users/5472761/aze?tab=profile"
-              color="#FF9653"
-            />
-            <SocialIcon
-              style={socialButtonStyles}
-              url="https://www.instagram.com/azelawijesinghe/"
-              color="#FF4571"
-            /> */}
-
-          <div className="footer-right">
+      
+          <div className="footer-right animated slideInUp fadeIn">
+        
             <p className="footer-text">Made with</p>
             <div class="lds-heart">
               <div />

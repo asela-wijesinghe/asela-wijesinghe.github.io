@@ -6,6 +6,7 @@ import { SocialMediaLine } from "../components/socialMediaLine.jsx";
 
 import { FiPhoneCall } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
+import { MenuComponent } from "../components/Menu";
 
 export class ContactPage extends React.Component {
   handleNewComment(comment) {
@@ -15,29 +16,7 @@ export class ContactPage extends React.Component {
   render() {
     return (
       <div className="contact-container animated fadeIn">
-        <label>
-          <input type="checkbox" />
-          <span className="menu">
-            <span className="hamburger" />
-          </span>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/work">Work</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            {/* <li>
-              <Link href="#">Resume</Link>
-            </li> */}
-          </ul>
-        </label>
+                 <MenuComponent/>
         <div className="left-card">
           <span className="heading">CONTACT</span>
           <p>KEEP IN TOUCH WITH ME</p>
