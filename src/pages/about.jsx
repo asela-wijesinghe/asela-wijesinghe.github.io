@@ -88,7 +88,7 @@ export class AboutPage extends React.Component {
               <div className="row">
                 <img src={logo1} className="avatar" />
                 <div className="column">
-                  <h4>Co-Founder | CTO | Full Stack Developer</h4>
+                  <h4>Co-Founder | CTO | Full Stack Engineer</h4>
                   <p>15NTAP Solutions</p>
                   <p>2015-2018</p>
                 </div>

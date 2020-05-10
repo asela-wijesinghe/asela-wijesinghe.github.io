@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import back from "../assets/images/back.png";
 
 export const MenuComponent = ()=> {
     return (
@@ -21,9 +22,10 @@ export const MenuComponent = ()=> {
           {/* <li>
             <Link to="/contact">Publications</Link>
           </li>
+          */}
           <li>
-            <Link to="/contact">Blog</Link>
-          </li> */}
+            <Link to="/blog">Blog</Link>
+          </li> 
           <li>
             <Link to="/contact">Contact</Link>
           </li>
@@ -33,4 +35,15 @@ export const MenuComponent = ()=> {
         </ul>
       </label>
     )
+}
+
+export const BackButton =()=>{
+  return (
+    <Link to="/blog">
+      <div className="back">
+      <img src={back} width={30} />
+    <p>{"Go Back"}</p>
+    </div>
+    </Link>
+  );
 }
