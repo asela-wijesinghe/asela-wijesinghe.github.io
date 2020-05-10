@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Masonry from "../components/masonry.jsx"
-import { MenuComponent } from "../components/Menu";
+import { MenuComponent,BackButton } from "../components/Menu";
 import article from "../assets/images/articles/article1.jpg";
 import {
     FacebookShareButton,
@@ -18,9 +18,81 @@ import {
     TwitterIcon,
     WhatsappIcon,
   } from "react-share";
+import ReactMarkdown from "react-markdown";
+import MediaQuery from "react-responsive";
 
+
+const articleDetails = [
+  
+    {
+      src: article, title: "How I created my own blog - Intro",
+      linkID: 1,
+       techs: ["ReactJS","AWS","Serverless"], 
+       desc: "It's my developer journey on how I planned and architected my blog while tackling few common problems along the way..."
+    },
+];
+
+  const markdown = `
+  # Live demo <br/>
+  
+  Changes are automatically rendered as you type.
+  
+  ## Table of Contents
+  
+  * Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
+  * Renders actual, "native" React DOM elements
+  * Allows you to escape or skip HTML (try toggling the checkboxes above)
+  * If you escape or skip the HTML, no dangerouslySetInnerHTML is used! Yay!
+  
+  ## HTML block below
+  
+  <blockquote>
+    This blockquote will change based on the HTML settings above.
+  </blockquote>
+  
+  ## How about some code?
+
+  
+  Pretty neat, eh?
+  
+  ## Tables?
+  
+  | Feature   | Support |
+  | --------- | ------- |
+  | tables    | ✔ |
+  | alignment | ✔ |
+  | wewt      | ✔ |
+  
+  ## More info?
+  <b>
+  Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
+  </b>
+  
+  ---------------
+  
+  A component by [Espen Hovlandsdal](https://espen.codes/)
+  `;
 export class ArticlePage extends React.Component {
+    
   render() {
+    const renderShareLinks =(id)=>{
+        return (
+            <div className="card-title-share">
+            <FacebookShareButton url={"https://asela-wijesinghe.github.io/blog/"+id} > 
+            <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
+           <TwitterShareButton url={"https://asela-wijesinghe.github.io/blog/"+id} > 
+            <TwitterIcon size={32} round={true} />
+          </TwitterShareButton>
+            <LinkedinShareButton url={"https://asela-wijesinghe.github.io/blog/"+id} > 
+            <LinkedinIcon size={32} round={true} />
+          </LinkedinShareButton>
+            <WhatsappShareButton url={"https://asela-wijesinghe.github.io/blog/"+id} > 
+            <WhatsappIcon size={32} round={true} />
+            </WhatsappShareButton>
+      </div>
+        )
+    }
 
     const masonryOptions = {
       transitionDuration: '0.5s',
@@ -29,51 +101,32 @@ export class ArticlePage extends React.Component {
     };
     return (
       <div className="container-article animated fadeIn">
+               
+               <BackButton/>
                <MenuComponent/>
-
+               
         {/* <img src={article} className="top-img-blog" /> */}
         <div className="card-article">
             <div className="card-title-container">
             <div className="card-title">
-          <h1 className="heading">7 Things to Build When You Feel Bored as a Programmer</h1>
-          <h2>It’s always a great time to learn new things and improve your skills</h2>
+          <h1 className="heading">{articleDetails[0].title}</h1>
+          <h2>{articleDetails[0].desc}</h2>
+          <MediaQuery query="(max-width: 768px)">
+        {renderShareLinks(articleDetails[0].linkID)}
+        </MediaQuery>
           </div>
-          <div className="card-title-share">
-   
-              <FacebookShareButton url={"shareUrl"} > 
-              <FacebookIcon size={32} round={true} />
-              </FacebookShareButton>
-
-             <TwitterShareButton url={"shareUrl"} > 
-              <TwitterIcon size={32} round={true} />
-            </TwitterShareButton>
-
-              <LinkedinShareButton url={"shareUrl"} > 
-              <LinkedinIcon size={32} round={true} />
-            </LinkedinShareButton>
-
-              <WhatsappShareButton url="asd" >  
-              <WhatsappIcon size={32} round={true} />
-              </WhatsappShareButton>
-        
-              
-        </div>
+          <MediaQuery query="(min-width: 769px)">
+        {renderShareLinks(articleDetails[0].linkID)}
+        </MediaQuery>
           </div>
           <div className="article-body">
-          <p>You’ve probably been thinking about an exciting and fun side project that you could work on. Although you want to build something, you’re not really sure about what to build. As a result of this, you feel bored.
-Why not build something fun and learn some new things instead?
-The best way to improve your skills is by actually building something. So let’s improve your skills while building one of the fun and challenging things that are listed in this piece.
-1. Self-Driving Lego Car
+        <p>
+            <ReactMarkdown
+        source={markdown}
+        escapeHtml={false}
+        /> 
+        </p>
 
-Photo by Praveesh Palakeel on Unsplash
-A couple of years ago I’ve worked on a kind of similar project like this one. The goal was to create a car made of Lego that could write a certain word on a piece of paper.
-This project aims to make a car using either Lego or Lego technic that could drive without bumping into any objects. You’ll need a Raspberry Pi (or Arduino) for this project, some Lego, and some ultrasonic sensors so you can avoid any obstacles.
-The combination of software and hardware is what makes this project so much fun. If you’ve never touched a Raspberry Pi (or Arduino) I would highly recommend a project like this to you.
-What you’ll learn:
-The basic usage of an Arduino (or Raspberry Pi).
-Reading sensors.
-The interaction between software and hardware.
-</p>
           </div>
           </div>
         <div class="arrow bounce" />

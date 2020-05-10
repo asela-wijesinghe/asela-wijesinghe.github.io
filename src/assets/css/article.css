@@ -1,5 +1,6 @@
 /* //article */
 
+@media (min-width: 769px) {
 .container-article{
   position: absolute;
   width: 100%;
@@ -12,9 +13,10 @@
 }
 
 .card-article {
+  position: absolute;
   margin: 10%;
-  width: auto;
-  height: auto;
+  margin-left: auto;
+  max-width: 750px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -43,18 +45,8 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-
-  
 }
 
-.card-title h1 {
-  margin: 0;
-}
-
-.card-title h2 {
-  color: #333;
-  font-weight: 400;
-}
 .card-title-share{
   width: 150px;
   margin-left: 20px;
@@ -66,9 +58,86 @@
   flex-direction: row;
 }
 
+
+}
+
+@media (max-width: 768px) {
+  .container-article{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #eee;
+  }
+  
+  .card-article {
+    position: absolute;
+    margin-top: 100px;
+    margin-bottom:  100px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    background-color: #fff;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    /* overflow: hidden; */
+  }
+  
+  
+  .card-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .card-title {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  
+  }
+
+  .card-title-share{
+    width: 150px;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+}
+
+.card-title h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.card-title h2 {
+  
+  color: #333;
+  font-weight: 400;
+}
+
 .article-body{
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.article-body p{
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px !important;
+
 }

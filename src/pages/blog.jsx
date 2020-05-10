@@ -9,7 +9,7 @@ import blog from "../assets/images/blog.jpg";
 const articleDetails = [
   
   {
-    src: article, title: "How I created my Blog - Intro",
+    src: article, title: "How I created my own blog - Intro",
     linkID: 1,
      techs: ["ReactJS","AWS","Serverless"], 
      role: "It's my developer journey on how I planned and architected my blog while tackling few common problems along the way..."
@@ -51,7 +51,7 @@ export class BlogPage extends React.Component {
         <img src={blog} className="top-img-blog" />
         <div className="bottom-card-blog">
           <span className="heading">ASELA'S BLOG</span>
-          <div className="project-summary-container">
+          <div className="blog-summary-container">
           <p>"Theres a part of me, whose always wanting to share my experiences.<br/> technical, career or could be life.."</p></div>
           <div className="masonry-container">
             <Masonry className={'grid'} // default ''
