@@ -7,6 +7,8 @@ import { HomePage } from "./pages/home.jsx";
 import { WorkPage } from "./pages/work.jsx";
 import { ContactPage } from "./pages/contact.jsx";
 import { AboutPage } from "./pages/about.jsx";
+import { BlogPage } from "./pages/blog.jsx";
+import { ArticlePage } from "./pages/article.jsx";
 
 import "./assets/css/Style.css";
 import "./assets/css/animations.css";
@@ -15,6 +17,8 @@ import "./assets/css/models.css";
 import "./assets/css/work.css";
 import "./assets/css/contact.css";
 import "./assets/css/about.css";
+import "./assets/css/blog.css";
+import "./assets/css/article.css";
 
 class App extends Component {
   constructor() {
@@ -40,7 +44,8 @@ class App extends Component {
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/work" component={WorkPage} />
-
+            <Route exact path="/blog" component={BlogPage} />
+            <Route exact path="/blog/:id" component={ArticlePage} />
           </div>
         </Router>
       );

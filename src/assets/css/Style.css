@@ -380,3 +380,11 @@ button:hover {
   color:white !important;
 }
 
+
+
+/* // link */
+.not-link{
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
