@@ -11,6 +11,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.5.2",
     "react-drag-drawer": "^3.3.0",
+    "react-helmet": "^6.0.0",
     "react-icons": "^3.2.2",
     "react-loaders": "^3.0.1",
     "react-markdown": "^4.3.1",
