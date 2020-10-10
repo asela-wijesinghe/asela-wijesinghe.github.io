@@ -45,7 +45,7 @@ class App extends Component {
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/work" component={WorkPage} />
             <Route exact path="/blog" component={BlogPage} />
-            <Route exact path="/blog/:id" component={ArticlePage} />
+            <Route exact path="/blog/:articleId" component={ArticlePage} />
           </div>
         </Router>
       );

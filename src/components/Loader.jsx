@@ -13,7 +13,8 @@ export default class Loader extends React.Component {
       display: "flex",
       flexDirection: "row",
       justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
+      backgroundColor: "#fff",
     };
     return (
       <div style={textStyles}>
