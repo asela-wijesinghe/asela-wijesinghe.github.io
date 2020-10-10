@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { withRouter } from "react-router";
-
-
 
 export default class SimpleSlider extends Component {
   render() {
@@ -14,6 +11,7 @@ export default class SimpleSlider extends Component {
       autoplay: true,
       arrows: false,
       speed: 2000,
+      fade: true,
       autoplaySpeed: 2500,
       // cssEase: "linear"
     };

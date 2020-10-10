@@ -79,8 +79,9 @@ export class HomePage extends React.Component {
                     "Believer",
                     "Technopreneur",
                     "UX Lover",
+                    "Product Developer",
                     "Full Stack Engineer",
-                    "Product Developer"
+                    "Lead Developer"
                     // "HTML characters &times; &copy;"
                   ]}
                 />
@@ -126,7 +127,7 @@ export class HomePage extends React.Component {
           <div className="footer-left animated slideInUp fadeIn" >
          
             <p className="footer-text">
-              Copyright &copy;{new Date().getFullYear()}. All rights reserved | &nbsp;
+              Copyrights &copy;{new Date().getFullYear()}. All rights reserved | &nbsp;
             </p>
           </div>
       

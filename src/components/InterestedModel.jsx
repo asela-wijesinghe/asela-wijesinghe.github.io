@@ -32,10 +32,10 @@ export default class ArModal extends React.Component {
           <div className="card">
             <h3>Web Developing</h3>
             <p className="pricing-small">
-              $ <span className="pricing">20</span> /hour
+              $ <span className="pricing">30</span> /hour
             </p>
             <p className="black-small">
-              From simple web designing to complex single page client side
+              From simple web designing to complex Single Page client side
               applications for business purposes using latest technologies
               available
             </p>
@@ -50,7 +50,7 @@ export default class ArModal extends React.Component {
           <div className="card">
             <h3>App Developing</h3>
             <p className="pricing-small">
-              $ <span className="pricing">25</span> /hour
+              $ <span className="pricing">35</span> /hour
             </p>
             <p className="black-small">
               Both Android/IOS applications with proper UX solutions generated
