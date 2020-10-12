@@ -93,7 +93,18 @@ const articleDetails = [
     techs: ["Career", "Software Development", "Team Leading"],
     role:
       "Let's talk about a key ingredient, most people does not focus on, nor will believe that it will play such an important role in software industry...",
-    body: `Coming Soon...`
+    body: `<p>
+    A random week, a random day, 2.47 AM 🕑 without sleeping on my comfy bed i've decided to write this up.
+     So if you came looking for the key to be a better developer let's start by setting your expectations about few commons things about developers.
+     It's close to 3 AM and i am still awake. Yes, that's a first. Some developers love to work willingly in the late night with the calmness factor while some will have no choice but to work late night with the amount of piled up work.
+     As 2nd there are lot of consistent learning efforts required day in day out from a developer to excel in the technologies he/she uses.
+    
+    <br/>
+    <br/>
+    From the last 2 years I was like where do I start. Well..today, finally here I start reminding this famous quote,
+    </p>
+    <i><h4>"The perfect way to start something new, is by starting it right now 💪..."</h4></i>
+    `
   }
 ];
 
