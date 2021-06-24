@@ -10,7 +10,9 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("https://imgur.com/ltiAppv.jpg") center center no-repeat;
+  /* background: url("https://imgur.com/ltiAppv.jpg") center center no-repeat; */
+  background: url(" https://imgur.com/HvrT0to.jpg") center center no-repeat;
+  box-shadow: inset 0 0 150px black;
   background-size: cover;
   z-index: 0;
 }
@@ -50,7 +52,7 @@
   flex-direction: row;
   padding-right: 0px;
   padding-left: 0px;
-  background-image: linear-gradient( to top, rgba(22, 22, 22, 1), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(22, 22, 22, 1), rgba(0, 0, 0, 0));
   /* background-color: rgba(22, 22, 22, 1); */
 }
 
@@ -67,7 +69,7 @@
   flex-direction: row;
   padding-right: 0px;
   padding-left: 0px;
-  background-image: linear-gradient( to top, rgba(22, 22, 22, 1), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(22, 22, 22, 1), rgba(0, 0, 0, 0));
   /* background-color: rgba(22, 22, 22, 1); */
 }
 
@@ -84,6 +86,7 @@
     justify-content: center;
     flex-direction: row;
   }
+
   .footer-left {
     visibility: hidden;
   }
@@ -113,9 +116,11 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -167,11 +172,13 @@
     justify-content: space-between;
     text-align: center;
   }
+
   .resp-text {
     margin-top: 5px !important;
     font-size: 2.2em !important;
     align-self: center;
   }
+
   .res-div {
     text-align: center;
     display: flex;
@@ -201,7 +208,7 @@
 }
 
 .white-text {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0px;
   margin-top: 15px;
   font-size: 40px;
@@ -209,7 +216,7 @@
 }
 
 .white-small {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0px;
   margin-top: 15px;
   font-size: 20px;
@@ -236,6 +243,7 @@
   padding: 20 !important;
   margin: 20;
 }
+
 .test-card {
   background-color: red;
   align-self: center;
@@ -377,13 +385,13 @@ button:hover {
 
 /* //slick */
 .slick-dots li.slick-active button:before {
-  color:white !important;
+  color: white !important;
 }
 
 
 
 /* // link */
-.not-link{
+.not-link {
   text-decoration: none;
   cursor: pointer;
   color: inherit;

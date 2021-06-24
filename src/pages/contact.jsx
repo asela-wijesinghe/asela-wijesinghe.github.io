@@ -16,7 +16,7 @@ export class ContactPage extends React.Component {
   render() {
     return (
       <div className="contact-container animated fadeIn">
-                 <MenuComponent/>
+        <MenuComponent />
         <div className="left-card">
           <span className="heading">CONTACT</span>
           <p>KEEP IN TOUCH WITH ME</p>
@@ -28,12 +28,15 @@ export class ContactPage extends React.Component {
           </p>
           <p className="contact-text">
             <FiMail className="icons" />
-            &nbsp;&nbsp;<b>email :</b> &nbsp;&nbsp;123azeela@gmail.com
+            &nbsp;&nbsp;<b>email :</b>{" "}
+            &nbsp;&nbsp;asela.wijesinghe1993@gmail.com
           </p>
           <br />
           <div class="download-container">
             <p>
-              <a href="data/Asela Wijesinghe.pdf" class="button" download><i class="fa fa-download"></i>Download CV</a>
+              <a href="data/Asela Wijesinghe.pdf" class="button" download>
+                <i class="fa fa-download"></i>Download CV
+              </a>
             </p>
           </div>
 

@@ -4,15 +4,14 @@ import react from "../assets/images/tech_logos/react.png";
 import firebase from "../assets/images/tech_logos/firebase.png";
 import redux from "../assets/images/tech_logos/redux.png";
 import sass from "../assets/images/tech_logos/sass.png";
-import java from "../assets/images/tech_logos/java.png";
+import graphql from "../assets/images/tech_logos/graphql.png";
+import vue from "../assets/images/tech_logos/vue.png";
 import rn from "../assets/images/tech_logos/rn.png";
 import aws from "../assets/images/tech_logos/aws.png";
-import spring from "../assets/images/tech_logos/spring.png";
+import mongodb from "../assets/images/tech_logos/mongodb.png";
 import hibernate from "../assets/images/tech_logos/hibernate.png";
 import node from "../assets/images/tech_logos/node.png";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Slider from "react-slick";
-import MediaQuery from "react-responsive";
 
 export default class ArModal extends React.Component {
   render() {
@@ -22,7 +21,7 @@ export default class ArModal extends React.Component {
       <div className="big_model_container">
         <div>
           <p className="black-normal">
-            You seem interested, why don't you reach out to me?
+            You seem interested! why don't you reach out to me for a chat?
           </p>
           <br />
         </div>
@@ -32,7 +31,7 @@ export default class ArModal extends React.Component {
           <div className="card">
             <h3>Web Developing</h3>
             <p className="pricing-small">
-              $ <span className="pricing">30</span> /hour
+              € <span className="pricing">30</span> /hour
             </p>
             <p className="black-small">
               From simple web designing to complex Single Page client side
@@ -43,14 +42,14 @@ export default class ArModal extends React.Component {
               {" "}
               <img src={react} className="logo-square-image" />{" "}
               <img src={sass} className="logo-square-image" />{" "}
-              <img src={redux} className="logo-square-image" />{" "}
-              <img src={node} className="logo-square-image" />{" "}
+              <img src={vue} className="logo-square-image" />{" "}
+              <img src={redux} className="logo-square-image" />
             </div>
           </div>
           <div className="card">
             <h3>App Developing</h3>
             <p className="pricing-small">
-              $ <span className="pricing">35</span> /hour
+              € <span className="pricing">35</span> /hour
             </p>
             <p className="black-small">
               Both Android/IOS applications with proper UX solutions generated
@@ -63,19 +62,19 @@ export default class ArModal extends React.Component {
           <div className="card">
             <h3>Fullstack Developing</h3>
             <p className="pricing-small">
-              $ <span className="pricing">40</span> /hour
+              € <span className="pricing">40</span> /hour
             </p>
             <p className="black-small">
               Planned from the scratch for customized business
               software,enterprise solutions,SaaS and e-Commerce applications
-              using latest design patterns
+              using latest industry practices
             </p>
             <div>
               {" "}
-              <img src={java} className="logo-square-image" />{" "}
+              <img src={node} className="logo-square-image" />{" "}
               <img src={aws} className="logo-square-image" />{" "}
-              <img src={hibernate} className="logo-square-image" />{" "}
-              <img src={spring} className="logo-square-image" />{" "}
+              <img src={mongodb} className="logo-square-image" />{" "}
+              <img src={graphql} className="logo-square-image" />{" "}
             </div>
           </div>
         </div>

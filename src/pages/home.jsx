@@ -12,16 +12,29 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { MenuComponent } from "../components/Menu";
 import Slick from "../components/slick";
 
-
 import Rupavahini from "../assets/images/videos/Rupavahini.png";
 import ChannelEye from "../assets/images/videos/channelEye.png";
 import Siyatha from "../assets/images/videos/Siyatha.png";
 
 const sliderData = [
-  { title: "ChannelEye - RiseNShine", url: ChannelEye , videoURL: "https://www.facebook.com/RiseAndShineLive/videos/788793621552736/"},  
-  { title: "Rupavahini KnowledgeFirst", url:Rupavahini, videoURL: "https://youtu.be/woNvL0nmsZ4?list=PLVsj5fppngPT7cAWK44FnVFvjKgX9fjQy&t=1228"},  
-  { title: "SiyathaTV Morning Show", url:Siyatha,videoURL: "https://youtu.be/9A7tUvSYMpw"},  
-  ]
+  {
+    title: "ChannelEye - RiseNShine",
+    url: ChannelEye,
+    videoURL:
+      "https://www.facebook.com/RiseAndShineLive/videos/788793621552736/"
+  },
+  {
+    title: "Rupavahini KnowledgeFirst",
+    url: Rupavahini,
+    videoURL:
+      "https://youtu.be/woNvL0nmsZ4?list=PLVsj5fppngPT7cAWK44FnVFvjKgX9fjQy&t=1228"
+  },
+  {
+    title: "SiyathaTV Morning Show",
+    url: Siyatha,
+    videoURL: "https://youtu.be/9A7tUvSYMpw"
+  }
+];
 
 export class HomePage extends React.Component {
   constructor() {
@@ -44,7 +57,7 @@ export class HomePage extends React.Component {
   }
 
   render() {
-    const { showVideoModel, showInterestedModel,selectedVideo } = this.state;
+    const { showVideoModel, showInterestedModel, selectedVideo } = this.state;
     return (
       <div className="App ">
         <Drawer
@@ -53,9 +66,9 @@ export class HomePage extends React.Component {
           modalElementClass={"modal"}
         >
           <VideoModal
-          
-          videoURL={selectedVideo} 
-          toggleClose={this.toggleVideoModal} />
+            videoURL={selectedVideo}
+            toggleClose={this.toggleVideoModal}
+          />
         </Drawer>
         <Drawer
           open={showInterestedModel}
@@ -66,30 +79,30 @@ export class HomePage extends React.Component {
         </Drawer>
         <div className="bg-img animated fadeIn">
           <br />
-         <MenuComponent/>
+          <MenuComponent />
           <RevealText />
-          
+
           <div className="main-div">
             <div className="left-div animated slideInLeft">
               <div className="res-div">
                 <h3 className="white-text resp-text">Hello, There..</h3>
-                <p className="white-text white-back resp-text">i am a</p>
+                <p className="white-text white-back resp-text">I am a</p>
                 <TypedText
                   strings={[
                     "Believer",
                     "Technopreneur",
-                    "UX Lover",
+                    "IT Professional",
                     "Product Developer",
-                    "Full Stack Engineer",
-                    "Lead Developer"
+                    "Tech Lead",
+                    "Software Consultant"
                     // "HTML characters &times; &copy;"
                   ]}
                 />
               </div>
               <div className="res-div">
                 <p className="white-small right-padding">
-                  Surf through my work, if you are interested you can hire me to develop a tailor made software solution for you..
-                  
+                  Surf through my work! <br /> If you are interested you can
+                  consult me to develop your product..
                 </p>
                 <Button
                   label="I'm interested"
@@ -98,41 +111,40 @@ export class HomePage extends React.Component {
               </div>
             </div>
 
-         
             <MediaQuery query="(min-width: 769px)">
-              
-            
               <div className="right-div animated slideInRight fadeIn">
-            
                 <p className="white-small padding">
                   <center>
-                <div style={{  maxWidth: "250px", alignSelf : "center"}}>
-                                  <Slick 
-                sliderData={sliderData}
-                 onClick={(videoURL) => this.setState({
-                         showVideoModel: true ,
-                         selectedVideo: videoURL
-                        })}/>
-                        
-                </div>
-                </center>
-                  Wanna know me better? here are some videos from our latest research products including "The Sorting Hat"<br />
-                 &nbsp;
+                    <div style={{ maxWidth: "250px", alignSelf: "center" }}>
+                      <Slick
+                        sliderData={sliderData}
+                        onClick={videoURL =>
+                          this.setState({
+                            showVideoModel: true,
+                            selectedVideo: videoURL
+                          })
+                        }
+                      />
+                    </div>
+                  </center>
+                  Wanna know me better? Here are some of my featured TV
+                  interviews
+                  <br />
+                  &nbsp;
                 </p>
                 <SocialMediaLine />
               </div>
             </MediaQuery>
           </div>
-   
-          <div className="footer-left animated slideInUp fadeIn" >
-         
+
+          <div className="footer-left animated slideInUp fadeIn">
             <p className="footer-text">
-              Copyrights &copy;{new Date().getFullYear()}. All rights reserved | &nbsp;
+              Copyrights &copy;{new Date().getFullYear()}. All rights reserved |
+              &nbsp;
             </p>
           </div>
-      
+
           <div className="footer-right animated slideInUp fadeIn">
-        
             <p className="footer-text">Made with</p>
             <div class="lds-heart">
               <div />

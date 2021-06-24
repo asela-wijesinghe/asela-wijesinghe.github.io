@@ -12,6 +12,10 @@ import logo6 from "../assets/images/logo6.png";
 import logo7 from "../assets/images/logo7.jpg";
 import logo8 from "../assets/images/logo8.jpg";
 import logo9 from "../assets/images/logo9.jpg";
+import logo10 from "../assets/images/logo10.jpg";
+import logo11 from "../assets/images/logo11.jpg";
+import logo12 from "../assets/images/logo12.jpg";
+
 import Masonry from "../components/masonry.jsx";
 import act1 from "../assets/images/activity/act1.jpg";
 import act2 from "../assets/images/activity/act2.png";
@@ -143,19 +147,27 @@ export class AboutPage extends React.Component {
             <div className="column divider">
               <h2 className="left-padding">Experience</h2>
               <div className="row">
+                <img src={logo11} className="avatar" />
+                <div className="column">
+                  <h4>Tech Lead</h4>
+                  <p>Redem GmbH</p>
+                  <p>2021</p>
+                </div>
+              </div>
+              <div className="row">
+                <img src={logo12} className="avatar" />
+                <div className="column">
+                  <h4>Co-Founder | Director of Technology</h4>
+                  <p>NicheLabs (Pvt) Ltd</p>
+                  <p>2020</p>
+                </div>
+              </div>{" "}
+              <div className="row">
                 <img src={logo9} className="avatar" />
                 <div className="column">
                   <h4>Senior Software Engineer</h4>
                   <p>Mitra Innovation (Pvt)Ltd</p>
-                  <p>2020</p>
-                </div>
-              </div>
-              <div className="row">
-                <img src={logo1} className="avatar" />
-                <div className="column">
-                  <h4>Co-Founder | CTO | Lead Developer</h4>
-                  <p>15NTAP Solutions</p>
-                  <p>2015-2019</p>
+                  <p>2020-2021</p>
                 </div>
               </div>
               <div className="row">
@@ -167,13 +179,21 @@ export class AboutPage extends React.Component {
                 </div>
               </div>
               <div className="row">
+                <img src={logo1} className="avatar" />
+                <div className="column">
+                  <h4>Co-Founder | CTO | Lead Developer</h4>
+                  <p>15NTAP Solutions</p>
+                  <p>2015-2019</p>
+                </div>
+              </div>
+              {/* <div className="row">
                 <img src={logo2} className="avatar" />
                 <div className="column">
                   <h4>Co-Founder | Head of Product Development</h4>
                   <p>Tuition Factory</p>
                   <p>2016-2018</p>
                 </div>
-              </div>
+              </div> */}
               <div className="row">
                 <img src={logo3} className="avatar" />
                 <div className="column">
@@ -182,17 +202,25 @@ export class AboutPage extends React.Component {
                   <p>2016-2017</p>
                 </div>
               </div>
-              <div className="row">
+              {/* <div className="row">
                 <img src={logo4} className="avatar" />
                 <div className="column">
                   <h4>General | Marketing executive</h4>
                   <p>CV.lk</p>
                   <p>2014-2015</p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="column ">
               <h2 className="left-padding">Education</h2>
+              <div className="row">
+                <img src={logo10} className="avatar" />
+                <div className="column">
+                  <h4>MBA (Reading)</h4>
+                  <p>Staffordshire University</p>
+                  <p>2021-2022</p>
+                </div>
+              </div>
               <div className="row">
                 <img src={logo5} className="avatar" />
                 <div className="column">
@@ -204,10 +232,7 @@ export class AboutPage extends React.Component {
               <div className="row">
                 <img src={logo6} className="avatar" />
                 <div className="column">
-                  <h4>
-                    CMJD (Comprehensive Master in Java Developing) | ABSD
-                    (Advanced Business Solution Developer)
-                  </h4>
+                  <h4>ABSD (Advanced Business Solutions Developer) | CMJD</h4>
                   <p>Institute of Java and Software Engineering</p>
                   <p>2013-2015</p>
                 </div>
