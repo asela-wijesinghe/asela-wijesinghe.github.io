@@ -1,6 +1,6 @@
-import img1 from "@/public/1.png";
-import img2 from "@/public/2.png";
-import img3 from "@/public/3.png";
+import img1 from "@/public/1.jpg";
+import img2 from "@/public/2.jpg";
+import img3 from "@/public/3.jpg";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaCrown, FaReact, FaRocket } from "react-icons/fa";
