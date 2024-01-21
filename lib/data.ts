@@ -3,8 +3,7 @@ import img2 from "@/public/2.png";
 import img3 from "@/public/3.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { FaCrown, FaReact, FaRocket } from "react-icons/fa";
 
 export const links = [
   {
@@ -35,28 +34,44 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Senior Software Developer",
+    location: "ReDem GmbH, Linz, Austria 🇦🇹",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Survey Data Cleaning Web Platform & Highly Available API (Vue.js | Node.js | GraphQL | AWS) | Responsible for the Product Architecture | Plan Technical Vision and Enhance Dev Processes | Delivering features as Full-Stack Developer",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2021 - Current",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Co-Founder & Director of Technology",
+    location: "Nichelabs (Pvt) Ltd, Sri Lanka 🇱🇰 🇦🇹",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      " Delivered dozens of web & mobile applications using modern JS techstack | Design Product/AWS Architectures | Handle Estimations, Billing, Risks and work with Clients | Grooming dev teams | Delivering project features as Full-Stack Developer",
+        icon: React.createElement(FaRocket),
+    date: "2021 - 2023",
+  },
+  {
+    title: " Senior Software Engineer",
+    location: "Mitra Innovations, Sri Lanka 🇱🇰 🇦🇺 🇬🇧 🇮🇩",
+    description:
+      "Delivered Multiple Applications based on React and React Native | Leading teams to meet project goals | Convert Legacy codebases to Modern Stack | Helping with Project Estimations and Pre-Sales",
+    icon: React.createElement(CgWorkAlt),
+    date: "2020 - 2021",
+  },
+  {
+    title: " Software Engineer",
+    location: "Calcey Technologies, LLC, Sri Lanka 🇱🇰 🇦🇺",
+    description:
+      "Specialized in React and React Native | Leading team to meet project goals | Specialized in React and React Native projects | Helping with Project Estimations and Pre-Sales",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2019 - 2020",
+  },
+  {
+    title: "Much more work history...",
+    location: "My Startup Legacy 🇱🇰",
+    description:
+      "Been part of 4+ Startups | Groomed to become a Tech Founder | Co-Founded multiple ventures eventually became failures |  Worked with Local and International clients | Awarded as a Finalist GSEA - Student Entreprenuer | Multiple Global Winners - Social Robotic Competitions in UK & Spain | Achieved 2nd Class - BSc (Specilaized) in Computer Science amidts my other unique commitments",
+    icon: React.createElement(FaCrown),
+    date: "2015 - 2020",
   },
 ] as const;
 

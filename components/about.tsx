@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
+import SectionHeading from "./section-heading";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -19,30 +18,29 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
+        My Ikigai as long as I can remember was always to help people out,{" "}
+        may that be clients who need advices from things that I've learnt the hard way,{" "}
+        or be products that needs my tech expertise{" "}
+        or be younger developers who need advices, guidance to advance their career{" "}
 
+        On this journey I created tech ventures and tried to scale them to become{" "}
+        <span className="font-medium">globally recognized</span>{" "}
+        companies.
+      </p>
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        Apart from that I have also worked in multiple{" "}
+        <span className="font-medium">Startups & Enterprise Companies</span>.{" "}
+        With <span className="font-medium">Clients, Dev Teams and Professionals</span>{" "}
+        across the globe starting from{" "}
+        <span className="italic"> Sri Lanka, Indonesia, UK, Australia</span>{" "}
+        and most recently the{" "}
+        <span className="italic"> DACH Region (Europe).</span>
+      </p>
+      <p>
+        If you feel my experience is valueble to you or your team as{" "}
+        <span className="font-medium">Founder or a Recruiter</span>{" "}
+        feel free to reach out to me. Let's discuss,{" "}
+        <span className="italic">how I can help...</span>.
       </p>
     </motion.section>
   );
