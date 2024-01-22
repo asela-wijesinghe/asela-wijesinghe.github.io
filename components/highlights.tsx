@@ -19,8 +19,8 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export default function highlights() {
-  const { ref } = useSectionInView("highlights");
+export default function Highlights() {
+  const { ref } = useSectionInView("Highlights");
 
   return (
     <section

@@ -1,6 +1,6 @@
 import img1 from "@/public/1.jpg";
 import img2 from "@/public/2.jpg";
-import img3 from "@/public/3.jpg";
+import img3 from "@/public/4.jpg";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaCrown, FaReact, FaRocket } from "react-icons/fa";
@@ -85,19 +85,20 @@ export const servicesData = [
     imageUrl: img1,
   },
   {
-    title: "CTO as a-Service",
-    description:
-      "Need a CTO but can't afford one or don't need one full-time? I can plan and guide your team to execute the visions you want to achieve",
-    tags: ["Architecture", "Team Building", "Technical Vision"],
-    imageUrl: img2,
-  },
-  {
     title: "Freelance Developement",
     description:
       "Best for small to medium sized projects. I can help you build your MVP, add features to your existing product, or improve performance.",
     tags: ["MVPs", "Features", "Performance Improvements"],
+    imageUrl: img2,
+  },
+  {
+    title: "CTO as a-Service",
+    description:
+      "Need a CTO but can't afford one or don't need one full-time? I can plan and guide your team to execute the visions you want to achieve",
+    tags: ["Architecture", "Team Building", "Technical Vision"],
     imageUrl: img3,
   },
+
 ] as const;
 
 export const highlightsData = [
