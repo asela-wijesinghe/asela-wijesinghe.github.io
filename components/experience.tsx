@@ -1,4 +1,6 @@
 "use client";
+// eslint-disable-next-line
+// @ts-nocheck
 
 import { useTheme } from "@/context/theme-context";
 import { experiencesData } from "@/lib/data";

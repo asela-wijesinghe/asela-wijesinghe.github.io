@@ -35,7 +35,7 @@ export default function Contact() {
       </p>
       <br/>
       <p className="italic">
-        Also here is something special if you are still a <span className="font-medium">youngster</span>,
+        "Also here is something special if you are still a <span className="font-medium">youngster</span>,
         <br />
         When I was begining my career I didn't have anyone to look up to and ask things when I am not sure if i am on correct path or not.
         I always had to experiment every step of my way. But if you need my{" "}
@@ -47,7 +47,7 @@ export default function Contact() {
         My Calender Link
         </a>.
         <br />
-        Please let me know the reason for the meeting in the description so I can roughly prepare myself for the meeting.
+        Please let me know the reason for the meeting in the description so I can roughly prepare myself for the meeting."
       </p>
 
       {/* <form
