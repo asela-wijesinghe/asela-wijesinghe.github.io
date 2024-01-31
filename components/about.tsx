@@ -21,14 +21,12 @@ export default function About() {
         My Ikigai as long as I can remember was always to help people out,{" "}
         may that be clients who need advices from things that I've learnt the hard way,{" "}
         or be products that needs my tech expertise{" "}
-        or be younger developers who need advices, guidance to advance their career{" "}
-
+        or be younger developers who need advices, guidance to advance their career.{" "}
+        </p>
+      <p>
         On this journey I created tech ventures and tried to scale them to become{" "}
         <span className="font-medium">globally recognized</span>{" "}
-        companies.
-      </p>
-      <p>
-        Apart from that I have also worked in multiple{" "}
+        companies. Apart from that I have also worked in multiple{" "}
         <span className="font-medium">Startups & Enterprise Companies</span>.{" "}
         With <span className="font-medium">Clients, Dev Teams and Professionals</span>{" "}
         across the globe starting from{" "}
