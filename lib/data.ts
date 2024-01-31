@@ -102,16 +102,19 @@ export const servicesData = [
 ] as const;
 
 export const highlightsData = [
+
+  "Software Architecture",
+  "Team Lead",
   "JavaScript",
   "Vue.js",
-  "React",
+  "React.js",
+  "Node.js",
   "Redux",
   "AWS",
-  "Express",
-  "Node.js",
-  "MongoDB",
   "GraphQL",
+  "AI Apps",
   "SCSS",
+  "MongoDB",
   "MySQL",
   "Git",
 ] as const;

@@ -25,7 +25,7 @@ export default function About() {
         </p>
       <p>
         On this journey I created tech ventures and tried to scale them to become{" "}
-        <span className="font-medium">globally recognized</span>{" "}
+        <span className="font-semibold">globally recognized</span>{" "}
         companies. Apart from that I have also worked in multiple{" "}
         <span className="font-medium">Startups & Enterprise Companies</span>.{" "}
         With <span className="font-medium">Clients, Dev Teams and Professionals</span>{" "}
@@ -35,8 +35,8 @@ export default function About() {
         <span className="italic"> DACH Region (Europe).</span>
       </p>
       <p>
-        If you feel my experience is valueble to you or your team as{" "}
-        <span className="font-medium">Founder or a Recruiter</span>{" "}
+        If you feel my experience is valueble to you or you as a{" "}
+        <span className="font-medium">Founder | Recruiter</span>{" "}
         feel free to reach out to me. Let's discuss,{" "}
         <span className="italic">how I can help...</span>.
       </p>
