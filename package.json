@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prod": "npx serve@latest out"
+    "prod-start": "npx serve@latest out"
   },
   "dependencies": {
     "@react-email/components": "^0.0.7",

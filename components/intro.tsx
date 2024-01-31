@@ -87,7 +87,7 @@ export default function Intro() {
           }}
         >
           Need My help?{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrowDown className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <Link
@@ -99,7 +99,7 @@ export default function Intro() {
           }}
         >
           Wanna Hire Me?{" "}
-          <BsArrowDown className="opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
           {/* <HiDownload className="opacity-60 group-hover:translate-y-1 transition" /> */}
         </Link>
 
