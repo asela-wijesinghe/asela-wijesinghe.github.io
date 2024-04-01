@@ -18,28 +18,21 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        My Ikigai as long as I can remember was always to help people out,{" "}
-        may that be clients who need advices from things that I've learnt the hard way,{" "}
-        or be products that needs my tech expertise{" "}
-        or be younger developers who need advices, guidance to advance their career.{" "}
+        My <span className="font-bold">IKIGAI</span> as long as I can remember was always to help build tech ventures,{" "}
+        whether it's providing hard-earned insights to <span className="italic underline capitalize">clients</span>,{" "}
+        lending my technical expertise to <span className="italic underline capitalize">products</span>{" "}
+        or guiding young <span className="italic underline capitalize">developers</span> to elevate their careers.{" "}
         </p>
-      <p>
-        On this journey I created tech ventures and tried to scale them to become{" "}
-        <span className="font-semibold">globally recognized</span>{" "}
-        companies. Apart from that I have also worked in multiple{" "}
-        <span className="font-medium">Startups & Enterprise Companies</span>.{" "}
-        With <span className="font-medium">Clients, Dev Teams and Professionals</span>{" "}
-        across the globe starting from{" "}
-        <span className="italic"> Sri Lanka, Indonesia, UK, Australia</span>{" "}
-        and most recently the{" "}
-        <span className="italic"> DACH Region (Europe).</span>
-      </p>
-      <p>
-        If you feel my experience is valueble to you or you as a{" "}
-        <span className="font-medium">Founder | Recruiter</span>{" "}
-        feel free to reach out to me. Let's discuss,{" "}
-        <span className="italic">how I can help...</span>.
+      <p className="mb-3">
+      Along this path, I've spearheaded tech ventures aiming for global recognition,
+      contributed to various startups and enterprise companies,
+      and collaborated with <span className="italic underline capitalize">Dev teams</span> and <span className="italic underline capitalize">professionals worldwide</span> from Sri Lanka and Indonesia to the UK, Australia, and extensively in the Europe.
+
+      If my journey resonates with you, or if you're a  <span className="italic underline capitalize">founder</span> or <span className="italic underline capitalize">recruiter</span> seeking value from my experiences,
+      I'm here. </p>
+      <p > <span className="font-medium capitalize ">Let's explore how I can contribute to your success?</span>
       </p>
     </motion.section>
   );
 }
+

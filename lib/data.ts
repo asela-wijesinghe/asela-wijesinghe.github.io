@@ -19,8 +19,8 @@ export const links = [
     hash: "#services",
   },
   {
-    name: "Highlights",
-    hash: "#highlights",
+    name: "Work",
+    hash: "#work",
   },
   {
     name: "Experience",
@@ -101,7 +101,7 @@ export const servicesData = [
 
 ] as const;
 
-export const highlightsData = [
+export const workData = [
 
   "Software Architecture",
   "Team Lead",

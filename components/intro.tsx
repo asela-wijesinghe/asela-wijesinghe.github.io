@@ -60,14 +60,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Asela.</span> I'm a{" "}
-        <span className="font-bold">Seasoned Software Engineer </span> with{" "}
+        Hello,   <span className="font-bold">I'm Asela.</span><br></br>
+        <span className="font-bold">Seasoned Software Engineer🧑🏽‍💻 </span> with{" "}
         <span className="font-bold">Over {new Date().getFullYear() - 2016} years</span> of experience. Plus an{" "}
-        <span className="font-bold">ex-CTO 🚀 </span> who loves{" "}
-
-        <span className="underline">building</span>  <span className="italic">killer tech products</span> &{" "}
-         <span className="underline">consulting</span> <span className="italic">early-stage founders</span>.
-
+        <span className="font-bold">Ex-CTO 🚀 </span>
+        who loves building killer <span className="italic underline">tech-products</span> & consulting early-stage <span className="italic underline">startups</span>.
       </motion.h1>
 
       <motion.div
